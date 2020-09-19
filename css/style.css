@@ -1,0 +1,343 @@
+/* Variables */
+
+:root {
+  --basic-white: #FFFFFF;
+
+  --basic-black: #000000;
+  --basic-extra-black: #283136;
+  --basic-dark-black: #231F20;
+  --basic-gray-black: #444444;
+
+  --basic-gray: #EEEEEE;
+  --basic-dark-gray: #A6A6A6;
+  --basic-low-gray: #DFDFDF;
+  --basic-medium-gray: #666666;
+  --basic-middle-gray: #888888;
+  --basic-extra-gray: #4D4D4D;
+  --basic-silver-gray: #C4C4C4;
+  --basic-nano-gray: #F2F2F2;
+  --basic-ultra-gray: #ABABAB;
+  --basic-super-gray: #D7DCDF;
+
+  --basic-red: #FB565A;
+  --basic-medium-red: #E74246;
+  --basic-dark-red: #D7373B;
+
+  --basic-green: #00CA74;
+  --basic-medium-green: #00BC6C;
+  --basic-dark-green: #00AA62;
+
+  --basic-yellow: #EFC849;
+  --basic-medium-yellow: #EAB534;
+  --basic-dark-yellow: #E5A722;
+
+  --basic-shadow-box: 0px 3px 0px rgba(0, 1, 1, 0.1);
+  --basic-shadow-gray: 0px 6px 15px rgba(0, 1, 1, 0.25);
+  --basic-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+
+  --basic-gradient-gray: linear-gradient(0deg, #E1E1E1, #E1E1E1);
+  --basic-gradient-red: linear-gradient(0deg, #E74246, #E74246);
+  --basic-gradient-dark-red: linear-gradient(0deg, #D7373B, #D7373B);
+}
+
+/* Global */
+
+body {
+  min-width: 1440px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-extra-black);
+  text-transform: none;
+  text-align: left;
+  background-color: var(--basic-white);
+  background-image: url("#");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.page a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main navigation */
+
+.main-header {
+  background-color: var(--basic-gray);
+}
+
+.main-navigation {
+  line-height: 30px;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: var(--basic-black);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.site-navigation a:hover,
+.user-navigation a:hover {
+  color: var(--basic-red);
+}
+
+.site-navigation a:active,
+.user-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.main-header-logo img,
+.main-header-logo img:hover {
+  background-color: var(--basic-black);
+}
+
+.main-header-logo img:active {
+  background-color: var(--basic-white);
+  opacity: 0.3;
+}
+
+/* Photoslides */
+
+.photoslides-list {
+  list-style: none;
+}
+
+.photoslides-item {
+  text-align: left;
+}
+
+.photoslides-slogan {
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+/* Button */
+
+.button {
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  border: 3px;
+}
+
+.button:active {
+  color: var(--basic-dark-gray);
+}
+
+.photoslides-know-button {
+  background-color: var(--basic-red);
+}
+
+.photoslides-know-button:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.photoslides-know-button:active {
+  background-color: var(--basic-dark-red);
+  box-shadow: var(--basic-shadow-box);
+}
+
+/* Services */
+
+.services-list {
+  list-style: none;
+}
+
+
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.website-button {
+  background-color: var(--basic-red);
+}
+
+.website-button:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.website-button:active {
+  background-color: var(--basic-dark-red);
+  box-shadow: var(--basic-shadow-box);
+}
+
+.app-button {
+  background-color: var(--basic-green);
+}
+
+.app-button:hover {
+  background-color: var(--basic-medium-green);
+}
+
+.app-button:active {
+  background-color: var(--basic-dark-green);
+  box-shadow: var(--basic-shadow-box);
+}
+
+.presentation-button {
+  background-color: var(--basic-yellow);
+}
+
+.presentation-button:hover {
+  background-color: var(--basic-medium-yellow);
+}
+
+.presentation-button:active {
+  background-color: var(--basic-dark-yellow);
+  box-shadow: var(--basic-shadow-box);
+}
+
+/* Features */
+
+.features-slogan {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.features-text {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.features-list {
+  list-style: none;
+}
+
+/* Statistics */
+
+.statistics-list {
+  list-style: none;
+}
+
+.statistics-caption {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--basic-black);
+}
+
+.statistics-numeral {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+.statistics-percent {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+  color: var(--basic-black);
+}
+
+.statistics-item p {
+  line-height: 18px;
+}
+
+/* Partners */
+
+.partners-list {
+  list-style: none;
+}
+
+.partner-link {
+  background-color: var(--basic-black);
+  opacity: 0.2;
+}
+
+.partner-link:hover {
+  background-color: var(--basic-black);
+}
+
+.partner-link:active {
+  background-color: var(--basic-black);
+  opacity: 0.2;
+}
+
+/* Map */
+
+/* Contacts */
+
+.contacts-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.contacts-address,
+.contacts-phone {
+  line-height: 18px;
+  color: var(--basic-medium-gray);
+}
+
+.contacts-button {
+  background-color: var(--basic-red);
+}
+
+.contacts-button:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.contacts-button:active {
+  background-color: var(--basic-dark-red);
+  box-shadow: var(--basic-shadow-box);
+}
+
+/* Social */
+
+.social-list{
+  list-style: none;
+}
+
+.social-button {
+  background-image: var(--basic-gradient-gray);
+}
+
+.social-button:hover {
+  background-image: var(--basic-gradient-red);
+}
+
+.social-button:active {
+  background-image: var(--basic-gradient-dark-red);
+  box-shadow: var(--basic-shadow-box);
+}
+
+/* Sale */
+
+.sale-tagline {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+.sale-desc {
+  line-height: 22px;
+  color: var(--basic-gray-black);
+}

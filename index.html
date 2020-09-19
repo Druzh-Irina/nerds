@@ -1,186 +1,158 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-body">
 
-<header>
-  <nav>
-    <a>
-    <img src="https://via.placeholder.com/160x65" alt="логотип nerds">
-    </a>
-    <ul>
-      <li><a href="#">Студия</a></li>
-      <li><a href="#">Клиенты</a></li>
-      <li><a href="catalog.html">Магазин</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
-    <a href="#">Корзина</a>
-  </nav>
 
-  <section>
-    <h2>Фотослайды</h2>
-    <ul>
-      <li>
-        <p>Долго, дорого, скурпулезно.</p>
-        <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-        <a href="#">Узнать больше</a>
-        <img src="https://via.placeholder.com/760x431" alt="слайд 1">
-      </li>
-      <li>
-        <p>Долго, дорого, скурпулезно.</p>
-        <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-        <a href="#">Узнать больше</a>
-        <img src="https://via.placeholder.com/760x431" alt="слайд 2">
-      </li>
-      <li>
-        <p>Долго, дорого, скурпулезно.</p>
-        <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-        <a href="#">Узнать больше</a>
-        <img src="https://via.placeholder.com/760x431" alt="слайд 3">
-      </li>
-    </ul>
-    <button type="button" disabled>кнопка1</button>
-    <button type="button">кнопка2</button>
-    <button type="button">кнопка3</button>
-  </section>
-</header>
+    <h1>Студия дизайна nёrd's</h1>
 
 <main>
 
-  <h1>Студия дизайна nёrd's</h1>
+  <main class="container">
 
-  <section>
-    <h2>Услуги</h2>
-    <ul>
-      <li>
-        <img src="https://via.placeholder.com/300x146" alt="иллюстрация веб-сайты">
-        <h3>ВЕБ-САЙТЫ</h3>
-        <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-        <a href="#">Заказать</a>
-      </li>
-      <li>
-        <img src="https://via.placeholder.com/300x146" alt="иллюстрация приложения">
-        <h3>ПРИЛОЖЕНИЯ</h3>
-        <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-        <a href="#">Заказать</a>
-      </li>
-      <li>
-        <img src="https://via.placeholder.com/300x146" alt="иллюстрация презентации">
-        <h3>ПРЕЗЕНТАЦИИ</h3>
-        <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-        <a href="#">Заказать</a>
-      </li>
-    </ul>
-  </section>
+    <section class="services">
+      <h2>Услуги</h2>
+      <ul class="services-list">
+        <li class="services-item">
+          <img src="https://via.placeholder.com/300x146" alt="веб-сайты на красном фоне">
+          <h3>Веб-сайты</h3>
+          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="button website-button" href="#">Заказать</a>
+        </li>
+        <li class="services-item">
+          <img src="https://via.placeholder.com/300x146" alt="приложения на зеленом фоне">
+          <h3>Приложения</h3>
+          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a class="button app-button" href="#">Заказать</a>
+        </li>
+        <li class="services-item">
+          <img src="https://via.placeholder.com/300x146" alt="презентации на желтом фоне">
+          <h3>Презентации</h3>
+          <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a class="button presentation-button" href="#">Заказать</a>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>О нас</h2>
-    <p>Мы - маленькая, но гордая дизайн-студия из Краснодара.</p>
-    <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-    <p>ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</p>
-    <ul>
-      <li>Веб-сайтов любой сложности</li>
-      <li>Мобильных приложений для iOS и Android</li>
-      <li>Слайдшоу и видео для корпоративных презентаций</li>
-    </ul>
-  </section>
+    <section class="features">
+      <h2>Преимущества</h2>
+      <p class="features-slogan">Мы - маленькая, но гордая дизайн-студия из Краснодара.</p>
+      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+      <p class="features-text">Выполняем заказы на разработку:</p>
+      <ul class="features-list">
+        <li class="features-item">
+          <p>Веб-сайтов любой сложности</p>
+        </li>
+        <li class="features-item">
+          <p>Мобильных приложений для iOS и Android</p>
+        </li>
+        <li class="features-item">
+          <p>Слайдшоу и видео для корпоративных презентаций</p>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Статистика</h2>
-    <img src="https://via.placeholder.com/360x208" alt="изображение nerds">
-    <p>С 2004 года любим точность во всем:</p>
-    <ul>
-      <li>
-        <span>146%</span>
-        <p>Уровень самоотдачи</p>
-      </li>
-      <li>
-        <span>100%</span>
-        <p>Соблюдение сроков</p>
-      </li>
-      <li>
-        <span>50%</span>
-        <p>Минимальная предоплата</p>
-      </li>
-    </ul>
-  </section>
+    <section class="statistics">
+      <h2>Статистика</h2>
+      <img src="https://via.placeholder.com/360x208" alt="изображение nerds с разноцветной абстракцией">
+      <p class="statistics-caption">С 2004 года любим точность во всем:</p>
+      <ul class="statistics-list">
+        <li class="statistics-item">
+          <span class="statistics-numeral">146</span>
+          <span class="statistics-percent">%</span>
+          <p>Уровень самоотдачи</p>
+        </li>
+        <li class="statistics-item">
+          <span class="statistics-numeral">100</span>
+          <span class="statistics-percent">%</span>
+          <p>Соблюдение сроков</p>
+        </li>
+        <li class="statistics-item">
+          <span class="statistics-numeral">50</span>
+          <span class="statistics-percent">%</span>
+          <p>Минимальная предоплата</p>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Наши партнеры:</h2>
-    <ul>
-      <li>
-        <a href="https://htmlacademy.ru/intensive">
-        <img src="https://via.placeholder.com/199x68" alt="партнер html academy">
-        </a>
-      </li>
-      <li>
-        <a href="#">
-        <img src="https://via.placeholder.com/209x90" alt="партнер Barbershop BORODINSKI">
-        </a>
-      </li>
-      <li>
-        <a href="#">
-        <img src="https://via.placeholder.com/185x52" alt="партнер PINK">
-        </a>
-      </li>
-      <li>
-        <a href="#">
-        <img src="https://via.placeholder.com/173x84" alt="партнер MiSHKA">
-        </a>
-      </li>
-    </ul>
-  </section>
+    <section class="partners">
+      <h2>Наши партнеры:</h2>
+      <ul class="partners-list">
+        <li>
+          <a class="partner-link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="https://via.placeholder.com/199x68" alt="партнер html academy">
+          </a>
+        </li>
+        <li>
+          <a class="partner-link" href="#">
+            <img src="https://via.placeholder.com/209x90" alt="партнер Barbershop BORODINSKI">
+          </a>
+        </li>
+        <li>
+          <a class="partner-link" href="#">
+            <img src="https://via.placeholder.com/185x52" alt="партнер PINK">
+          </a>
+        </li>
+        <li>
+          <a class="partner-link" href="#">
+            <img src="https://via.placeholder.com/173x84" alt="партнер MiSHKA">
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-  <section>
-    <h2>Карта</h2>
-    <!-- Здесь будет карта -->
-  </section>
+  <footer class="page-footer main-footer">
 
-  <section>
-    <h2>Контактная информация</h2>
-    <p>
-      NЁRDS DESIGN STUDIO<br>
-      191186, Санкт-Петербург,<br>
-      ул. Б. Конюшенная, д. 19/8
-    </p>
-    <p>
-      тел.
-      <a href="tel:+78122757575">+7 (812) 275-75-75</a>
-    </p>
-    <a href="#">НАПИШИТЕ НАМ</a>
-  </section>
+    <section class="modal modal-map">
+      <h2>Карта</h2>
+      <!-- Здесь будет карта -->
+    </section>
 
-  <section>
-    <h2>маркер nёrd's на карте</h2>
-    <img src="https://via.placeholder.com/231x190" alt="маркер nёrd's на карте">
-  </section>
-</main>
+    <section class="contacts">
+      <h2>Контактная информация</h2>
+      <p class="contacts-title">Nёrds design studio</p>
+      <p class="contacts-address">191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8
+      </p>
+      <p>тел.
+        <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
+      </p>
+      <a class="button contacts-button" href="#">НАПИШИТЕ НАМ</a>
+    </section>
 
-<footer>
-  <section>
-    <h2>Мы в соцсетях</h2>
-    <ul>
-      <li>
-        <a href="#">Вконтакте</a>
-      </li>
-      <li>
-        <a href="#">Фейсбук</a>
-      </li>
-      <li>
-        <a href="#">Инстаграм</a>
-      </li>
-    </ul>
-  </section>
+    <section class="marker">
+      <h2>маркер nёrd's на карте</h2>
+      <img src="https://via.placeholder.com/231x190" alt="маркер nёrd's на карте">
+    </section>
 
-  <section>
-    <h2>Скидка</h2>
-    <p>Давайте дружить, это выгодно!</p>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
-  </section>
-</footer>
+    <section class="social">
+      <h2>Мы в соцсетях</h2>
+      <ul class="social-list">
+        <li>
+          <a class="button social-button" href="#">Вконтакте</a>
+        </li>
+        <li>
+          <a class="button social-button" href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a class="button social-button" href="#">Инстаграм</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sale">
+      <h2>Скидка</h2>
+      <p class="sale-tagline">Давайте дружить, это выгодно!</p>
+      <p class="sale-desc">Скидка 10% для друзей из социальных сетей.</p>
+    </section>
+  </footer>
 </body>
 </html>
