@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
@@ -8,64 +8,71 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body  class="page-body">
 
-  <header>
-    <nav>
-      <a href="index.html">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="index.html">
         <img src="https://via.placeholder.com/160x65" alt="логотип nёrds">
       </a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
-      <div>
-        <a href="#">Корзина</a>
+      <div class="user-navigation">
+        <a class="cart" href="#">Корзина</a>
       </div>
     </nav>
 
-    <h1>Магазин готовых шаблонов</h1>
+    <h1 class="catalog-title">Магазин готовых шаблонов</h1>
   </header>
 
-  <main>
+  <main class="page-catalog container">
 
-    <section>
-      <h2>Фильтр цен и услуг</h2>
-      <span>Стоимость:</span>
+    <section class="service-filter">
+      <h2>Фильтр услуг</h2>
+      <span class="service-filter-desc">Стоимость:</span>
       <!-- Здесь будет форма фильтра-->
     </section>
 
-    <section>
+    <section class="sorting-filter">
       <h2>Фильтр сортировки</h2>
-      <span>Сортировать:</span>
-      <ul>
-        <li>
-          <a href="#">По цене</a>
+      <span class="sorting-filter-desc">Сортировать:</span>
+      <ul class="sorting-filter-list">
+        <li class="sorting-filter-item sorting-filter-item-current">
+          <a>По цене</a>
         </li>
-        <li>
+        <li class="sorting-filter-item">
           <a href="#">По типу</a>
         </li>
-        <li>
+        <li class="sorting-filter-item">
           <a href="#">По названию</a>
         </li>
       </ul>
-      <a href="#">Вниз</a>
-      <a href="#">Вверх</a>
+
+      <ul class="sorting-list">
+        <li class="sorting-item sorting-item-current">
+          <a>Вниз</a>
+        </li>
+        <li class="sorting-item">
+          <a href="#">Вверх</a>
+        </li>
+      </ul>
     </section>
 
     <section>
-      <h2>Список шаблонов</h2>
-      <ul>
+      <h2>Шаблоны</h2>
+      <ul class="template-list">
         <li>
           <h3>SEDONA</h3>
           <img src="https://via.placeholder.com/360x40" alt="декоративная дорожка-слайдер для шаблона SEDONA">
           <img src="https://via.placeholder.com/360x580" alt="шаблон SEDONA">
           <img src="https://via.placeholder.com/360x231" alt="попап с ценником для шаблона SEDONA">
-          <p>Sedona</p>
-          <p>Информационный сайт  для туристов</p>
-          <a href="#">9 900 ₽</a>
+          <a class="template-price-title" href="#">Sedona</a>
+          <p class="template-price-text">Информационный сайт  для туристов</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
         </li>
 
         <li>
@@ -73,9 +80,9 @@
           <img src="https://via.placeholder.com/360x40" alt="декоративная дорожка-слайдер для шаблона PINK">
           <img src="https://via.placeholder.com/360x580" alt="шаблон PINK">
           <img src="https://via.placeholder.com/360x231" alt="попап с ценником для шаблона PINK">
-          <p>Pink App</p>
-          <p>Продуктовый лендинг  приложения для iOS и Android</p>
-          <a href="#">9 900 ₽</a>
+          <a class="template-price-title" href="#">Pink App</a>
+          <p class="template-price-text">Продуктовый лендинг  приложения для iOS и Android</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
         </li>
 
         <li>
@@ -83,9 +90,9 @@
           <img src="https://via.placeholder.com/360x40" alt="декоративная дорожка-слайдер для шаблона Barbershop BORODINSKI">
           <img src="https://via.placeholder.com/360x580" alt="шаблон Barbershop BORODINSKI">
           <img src="https://via.placeholder.com/360x231" alt="попап с ценником для шаблона Barbershop BORODINSKI">
-          <p>Barbershop</p>
-          <p>Сайт салона красоты.  Для мужчин, да.</p>
-          <a href="#">9 900 ₽</a>
+          <a class="template-price-title" href="#">Barbershop</a>
+          <p class="template-price-text">Сайт салона красоты.  Для мужчин, да.</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
         </li>
 
         <li>
@@ -93,9 +100,9 @@
           <img src="https://via.placeholder.com/360x40" alt="декоративная дорожка-слайдер для шаблона MiSHKA">
           <img src="https://via.placeholder.com/360x580" alt="шаблон MiSHKA">
           <img src="https://via.placeholder.com/360x231" alt="попап с ценником для шаблона MiSHKA">
-          <p>MISHKA</p>
-          <p>Интернет-магазин  вязаных игрушек</p>
-          <a href="#">9 900 ₽</a>
+          <a class="template-price-title" href="#">MISHKA</a>
+          <p class="template-price-text">Интернет-магазин  вязаных игрушек</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
         </li>
 
         <li>
@@ -103,9 +110,9 @@
           <img src="https://via.placeholder.com/360x40" alt="декоративная дорожка-слайдер для шаблона A Plus">
           <img src="https://via.placeholder.com/360x580" alt="шаблон A Plus">
           <img src="https://via.placeholder.com/360x231" alt="попап с ценником для шаблона A Plus">
-          <p>A Plus</p>
-          <p>Лендинг курсов повышения квалификации</p>
-          <a href="#">9 900 ₽</a>
+          <a class="template-price-title" href="#">A Plus</a>
+          <p class="template-price-text">Лендинг курсов повышения квалификации</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
         </li>
 
         <li>
@@ -113,26 +120,26 @@
           <img src="https://via.placeholder.com/360x40" alt="декоративная дорожка-слайдер для шаблона КВАСТ">
           <img src="https://via.placeholder.com/360x580" alt="шаблон КВАСТ">
           <img src="https://via.placeholder.com/360x231" alt="попап с ценником для шаблона КВАСТ">
-          <p>КВАСТ</p>
-          <p>Промо-сайт производителя  крафтового кваса</p>
-          <a href="#">9 900 ₽</a>
+          <a class="template-price-title" href="#">КВАСТ</a>
+          <p class="template-price-text">Промо-сайт производителя  крафтового кваса</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
         </li>
       </ul>
     </section>
 
     <section>
       <h2>Пагинация</h2>
-      <ul>
-        <li>
+      <ul class="pagination-list">
+        <li class="pagination-item pagination-item-current">
           <a>1</a>
         </li>
-        <li>
+        <li class="pagination-item">
           <a href="#">2</a>
         </li>
-        <li>
+        <li class="pagination-item">
           <a href="#">3</a>
         </li>
-        <li>
+        <li class="pagination-item">
           <a href="#">Следующая</a>
         </li>
       </ul>
@@ -140,48 +147,48 @@
 
   </main>
 
-  <footer>
-    <section>
+  <footer class="page-footer main-footer">
+    <section class="modal modal-map">
       <h2>Карта</h2>
       <!-- Здесь будет карта -->
     </section>
 
-    <section>
+    <section class="contacts">
       <h2>Контактная информация</h2>
-      <p>Nёrds design studio</p>
-      <p>191186, Санкт-Петербург,<br>
+      <p class="contacts-title">Nёrds design studio</p>
+      <p class="contacts-address">191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8
       </p>
       <p>тел.
-        <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+        <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
       </p>
-      <a href="#">НАПИШИТЕ НАМ</a>
+      <a class="button contacts-button" href="#">НАПИШИТЕ НАМ</a>
     </section>
 
-    <section>
+    <section class="marker">
       <h2>маркер nёrd's на карте</h2>
       <img src="https://via.placeholder.com/231x190" alt="маркер nёrd's на карте">
     </section>
 
-    <section>
+    <section class="social">
       <h2>Мы в соцсетях</h2>
-      <ul>
+      <ul class="social-list">
         <li>
-          <a href="#">Вконтакте</a>
+          <a class="button social-button" href="#">Вконтакте</a>
         </li>
         <li>
-          <a href="#">Фейсбук</a>
+          <a class="button social-button" href="#">Фейсбук</a>
         </li>
         <li>
-          <a href="#">Инстаграм</a>
+          <a class="button social-button" href="#">Инстаграм</a>
         </li>
       </ul>
     </section>
 
-    <section>
+    <section class="sale">
       <h2>Скидка</h2>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <p class="sale-tagline">Давайте дружить, это выгодно!</p>
+      <p class="sale-desc">Скидка 10% для друзей из социальных сетей.</p>
     </section>
   </footer>
 </body>
