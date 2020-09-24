@@ -36,6 +36,7 @@
   --basic-shadow-box: 0px 3px 0px rgba(0, 1, 1, 0.1);
   --basic-shadow-gray: 0px 6px 15px rgba(0, 1, 1, 0.25);
   --basic-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  --basic-drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
 
@@ -59,10 +60,6 @@ body {
   color: var(--basic-extra-black);
   text-transform: none;
   text-align: left;
-  background-color: var(--basic-white);
-  background-image: url("#");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 .page a {
@@ -271,18 +268,19 @@ img {
   list-style: none;
 }
 
-.partner-link {
-  background-color: var(--basic-black);
+.partner-link img {
+  background-color: var(--basic-background-white);
   opacity: 0.2;
 }
 
-.partner-link:hover {
-  background-color: var(--basic-black);
+.partner-link img:hover {
+  background-color: var(--basic-background-white);
+  opacity: 1;
 }
 
-.partner-link:active {
-  background-color: var(--basic-black);
-  opacity: 0.2;
+.partner-link img:active {
+  background-color: var(--basic-background-white);
+  opacity: 0.1;
 }
 
 /* Map */
@@ -348,7 +346,7 @@ img {
   color: var(--basic-gray-black);
 }
 
- /* Catalog title */
+/* Catalog title */
 
 .catalog-title {
   font-weight: 500;
@@ -430,6 +428,14 @@ img {
 
 .template-list {
   list-style: none;
+}
+
+.templates-button{
+  background-color: var(--basic-extra-gray);
+  weight: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
 }
 
 .template-price-title {

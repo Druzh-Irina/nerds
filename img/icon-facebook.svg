@@ -1,0 +1,18 @@
+<svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="79" height="79" fill="#888888"/>
+<g id="Index" clip-path="url(#clip0)">
+<rect width="1440" height="2476" transform="translate(-231 -2328)" fill="white"/>
+<g id="Shape 2 copy 4">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6617 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6617 78.4597C18.054 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.054 0.211598 39.6617 0.211598Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6617 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6617 78.4597C18.054 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.054 0.211598 39.6617 0.211598Z" fill="#E1E1E1"/>
+</g>
+<g id="fb-icon">
+<path id="Shape" d="M46 34V30H42C39.7909 30 38 31.7909 38 34V38H34V42H38V52H42V42H46V38H42V34H46Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1440" height="2476" fill="white" transform="translate(-231 -2328)"/>
+</clipPath>
+</defs>
+</svg>
