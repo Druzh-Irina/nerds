@@ -75,6 +75,7 @@ img {
 
 .main-header {
   background-color: var(--basic-gray);
+  margin-bottom: 70px;
 }
 
 .main-navigation {
@@ -508,4 +509,139 @@ img {
   color: var(--basic-black);
   background-color: var(--basic-background-white);
   border: 3px solid var(--basic-hyper-gray);
+}
+
+
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* Grid header */
+.main-header-wrapper {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.main-header-logo {
+  margin-top: 49px;
+}
+
+.site-navigation {
+  display: grid;
+  width: 437px;
+  height: 30px;
+  margin: 75px auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 45px;
+}
+
+.main-navigation-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 105px;
+}
+
+.main-navigation {
+  display: grid;
+  grid-template-columns: 160px 1fr 105px;
+}
+
+.user-navigation {
+  margin-top: 75px;
+}
+
+.photoslides-list {
+  margin: 0;
+  padding: 0;
+}
+
+.photoslides-item {
+  display: grid;
+  z-index: 1;
+  height: 431px;
+  width: 1157px;
+  grid-template-columns: 397px 141px 760px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.photoslides-slogan {
+  z-index: 2;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.photoslides-slogan+p {
+  z-index: 2;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.photoslides-item img {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+}
+
+/* Grid main */
+
+.container {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.services {
+  margin-bottom: 121px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.features-and-statistics {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  column-gap: 149px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 121px;
+}
+
+.statistics-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+}
+
+.partners-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Grid footer */
+
+.footer-container {
+  display: grid;
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  grid-template-columns: min-content 1fr;
+  column-gap: 139px;
+}
+
+.social-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
