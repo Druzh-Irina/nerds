@@ -47,7 +47,7 @@
   --basic-background-white: rgba(0, 0, 0, 0.0001)
 }
 
-/* Global */
+/* ========== Global ========== */
 
 body {
   min-width: 1440px;
@@ -70,12 +70,12 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+/* ========== Index page ========== */
 /* Main navigation */
 
 .main-header {
   background-color: var(--basic-gray);
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .main-navigation {
@@ -149,6 +149,7 @@ img {
 
 .photoslides-know-button {
   background-color: var(--basic-red);
+  margin-bottom: 80px;
 }
 
 .photoslides-know-button:hover {
@@ -347,6 +348,7 @@ img {
   color: var(--basic-gray-black);
 }
 
+/* ========== Catalog page ========== */
 /* Catalog title */
 
 .catalog-title {
@@ -356,6 +358,7 @@ img {
   text-align: center;
   color: var(--basic-black);
   text-align: center;
+  margin-bottom: 108px;
 }
 
 /* Catalog filtres */
@@ -512,8 +515,7 @@ img {
 }
 
 
-/* Grid */
-
+/* ========== Grid index page ========== */
 .page {
   height: 100%;
 }
@@ -539,7 +541,6 @@ img {
 .site-navigation {
   display: grid;
   width: 437px;
-  height: 30px;
   margin: 75px auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 45px;
@@ -567,7 +568,6 @@ img {
 .photoslides-item {
   display: grid;
   z-index: 1;
-  height: 431px;
   width: 1157px;
   grid-template-columns: 397px 141px 760px;
   grid-template-rows: 1fr 1fr 1fr;
@@ -632,6 +632,12 @@ img {
 
 /* Grid footer */
 
+.modal-map {
+  width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 .footer-container {
   display: grid;
   width: 1200px;
@@ -644,4 +650,7 @@ img {
 .social-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
 }
+
+/* ========== Grid catalog page ========== */
