@@ -654,3 +654,43 @@ img {
 }
 
 /* ========== Grid catalog page ========== */
+
+.page-catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr auto;
+  column-gap: 140px;
+  align-content: start;
+}
+
+.service-filter {
+  grid-row: 1 / 4;
+}
+
+.sorting-filter {
+  margin-bottom: 48px;
+}
+
+.sorting-filter-list,
+.sorting-list {
+  margin: 0;
+  padding: 0;
+}
+
+.templates {
+  margin-bottom: 55px;
+}
+
+.template-list {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination {
+  margin-bottom: 60px;
+}
+
+.pagination-list {
+  margin: 0;
+  padding: 0;
+}
