@@ -11,21 +11,21 @@
 <body class="page-body">
 
   <header class="main-header">
-    <div class="main-header-wrapper">
+    <div class="main-header-wrapper container">
       <nav class="main-navigation">
         <a class="main-header-logo">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="логотип nёrds">
         </a>
-        <div class="main-navigation-wrapper">
-          <ul class="site-navigation">
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <div class="user-navigation">
-            <a class="cart" href="#">Корзина</a>
-          </div>
+        <!-- <div class="main-navigation-wrapper"> -->
+        <ul class="site-navigation">
+          <li class="site-link"><a href="#">Студия</a></li>
+          <li class="site-link"><a href="#">Клиенты</a></li>
+          <li class="site-link"><a href="catalog.html">Магазин</a></li>
+          <li class="site-link"><a href="#">Контакты</a></li>
+        </ul>
+        <div class="user-navigation">
+          <a class="cart" href="#">Корзина</a>
+          <!-- </div> -->
         </div>
       </nav>
 
@@ -62,7 +62,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="page-main container">
 
     <section class="services">
       <h2>Услуги</h2>
@@ -76,7 +76,7 @@
         <li class="services-item">
           <img src="https://via.placeholder.com/300x146" alt="приложения на зеленом фоне">
           <h3>Приложения</h3>
-          <p>Покорите топ-10 приложений в<br> AppStore и Google Play</p>
+          <p>Покорите топ-10 приложений<br> в AppStore и Google Play</p>
           <a class="button app-button" href="#">Заказать</a>
         </li>
         <li class="services-item">
@@ -92,7 +92,7 @@
       <section class="features">
         <h2>Преимущества</h2>
         <p class="features-slogan">Мы - маленькая, но гордая<br> дизайн-студия из Краснодара.</p>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический <br> превыше креатива. Работаем не покладая рук, как роботы.</p>
+        <p class="features-desc">Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br> превыше креатива. Работаем не покладая рук, как роботы.</p>
         <p class="features-text">Выполняем заказы на разработку:</p>
         <ul class="features-list">
           <li class="features-item">
@@ -115,43 +115,45 @@
           <li class="statistics-item">
             <span class="statistics-numeral">146</span>
             <span class="statistics-percent">%</span>
-            <p>Уровень<br> самоотдачи</p>
           </li>
           <li class="statistics-item">
             <span class="statistics-numeral">100</span>
             <span class="statistics-percent">%</span>
-            <p>Соблюдение<br> сроков</p>
           </li>
           <li class="statistics-item">
             <span class="statistics-numeral">50</span>
             <span class="statistics-percent">%</span>
-            <p>Минимальная<br> предоплата</p>
           </li>
         </ul>
+        <div class="statistics-desc">
+          <p class="statistics-desc-1">Уровень<br> самоотдачи</p>
+          <p class="statistics-desc-2">Соблюдение<br> сроков</p>
+          <p class="statistics-desc-3">Минимальная<br> предоплата</p>
+        </div>
       </section>
     </div>
 
     <section class="partners">
       <h2>Наши партнеры:</h2>
       <ul class="partners-list">
-        <li>
+        <li class="partners-item">
           <a class="partner-link" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-1.png" width="199" height="68" alt="партнер html academy">
           </a>
         </li>
-        <li>
+        <li class="partners-item">
           <a class="partner-link" href="#">
-            <img src="img/logo-2.png" width="209" height="90" alt="партнер Barbershop BORODINSKI">
+            <img class="partner-logo" src="img/logo-2.png" width="209" height="90" alt="партнер Barbershop BORODINSKI">
           </a>
         </li>
-        <li>
+        <li class="partners-item">
           <a class="partner-link" href="#">
-            <img src="img/logo-3.png" width="185" height="52" alt="партнер PINK">
+            <img class="partner-logo" src="img/logo-3.png" width="185" height="52" alt="партнер PINK">
           </a>
         </li>
-        <li>
+        <li class="partners-item">
           <a class="partner-link" href="#">
-            <img src="img/logo-4.png" width="173" height="84" alt="партнер MiSHKA">
+            <img class="partner-logo" src="img/logo-4.png" width="173" height="84" alt="партнер MiSHKA">
           </a>
         </li>
       </ul>
@@ -160,7 +162,7 @@
 
   <footer class="page-footer main-footer">
 
-    <section class="modal modal-map">
+    <section class="modal modal-map container">
       <h2>Карта</h2>
       <!-- Здесь будет карта -->
       <img src="img/map.jpg" width="1440" height="416" alt="карта с адресом nёrds">
@@ -183,17 +185,17 @@
       <img src="img/map-marker.png" width="231" height="190" alt="маркер nёrd's на карте">
     </section>
 
-    <div class="footer-container">
+    <div class="footer-wrapper container">
       <section class="social">
         <h2>Мы в соцсетях</h2>
         <ul class="social-list">
-          <li>
+          <li class="social-item">
             <a class="button social-button" href="#">Вконтакте</a>
           </li>
-          <li>
+          <li class="social-item">
             <a class="button social-button" href="#">Фейсбук</a>
           </li>
-          <li>
+          <li class="social-item">
             <a class="button social-button" href="#">Инстаграм</a>
           </li>
         </ul>
