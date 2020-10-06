@@ -985,7 +985,7 @@ grid-template-columns: 1fr 1fr 1fr;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 443px;
+  width: 721px; /* Бесконечная пагинация не предусмотрена макетом, поэтому при проверке на доп. контент в колонке помещается 12 страниц 50ч50px, а страница "следующая" должна оставаться в конце */
   margin: 0;
   padding: 0;
 }
@@ -994,6 +994,6 @@ grid-template-columns: 1fr 1fr 1fr;
   margin-right: 11px;
 }
 
-.pagination-item:nth-child(4n) {
+.pagination-item:nth-child(12n) {
   margin-right: 0;
 }
