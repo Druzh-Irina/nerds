@@ -16,6 +16,7 @@
   --basic-middle-gray: #888888;
   --basic-hyper-gray: #DBDBDB;
   --basic-extra-gray: #4D4D4D;
+  --basic-bright-gray: #E1E1E1;
   --basic-light-gray: #C1C1C1;
   --basic-silver-gray: #C4C4C4;
   --basic-nano-gray: #F2F2F2;
@@ -45,7 +46,7 @@
   --basic-gradient-red: linear-gradient(0deg, #E74246, #E74246);
   --basic-gradient-dark-red: linear-gradient(0deg, #D7373B, #D7373B);
 
-  --basic-background-white: rgba(0, 0, 0, 0.0001)
+  --basic-background-white: rgba(0, 0, 0, 0.0001);
 }
 
 /* ========== Global ========== */
@@ -111,7 +112,7 @@ img {
 }
 
 .button:active {
-  color: var(--basic-dark-gray)
+  color: var(--basic-low-gray);
 }
 
 /* Grid index page */
@@ -706,19 +707,29 @@ grid-template-columns: 1fr 1fr 1fr;
 }
 
 .social-button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 81px;
   height: 81px;
+  color: var(--basic-white);
+  border-radius: 50%;
+  border: 1px solid var(--basic-bright-gray);
+  background-color: var(--basic-bright-gray);
 }
 
-.social-button:hover path {
-  fill: var(--basic-red);
+.social-button:hover {
+  background-image: var(--basic-gradient-red);
 }
 
-.social-button:active path {
-  fill: var(--basic-dark-red);
+.social-button:active {
+  background-image: var(--basic-gradient-dark-red);
+  box-shadow: var(--basic-shadow-box);
 }
 
+.social-button:active svg {
+  opacity: 0.3;
+}
 
 /* Sale */
 
