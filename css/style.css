@@ -80,9 +80,6 @@ img {
   box-sizing: border-box;
   padding: 0 20px;
   margin: 0 auto;
-
-  outline: 5px solid rgba(255, 0, 255, 0.3);
-  outline-offset: -5px;
 }
 
 .visually-hidden {
@@ -1001,7 +998,7 @@ img {
 
 /* filter checkbox */
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox + label::after {
   content: "";
   position: absolute; /* квадрат чекбокса  */
   top: -4px;
@@ -1019,21 +1016,22 @@ img {
   position: absolute; /* галка в чекбоксе */
   top: -4px;
   left: -36px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 23px;
   background-image: url("../img/checkbox-on.svg");
-  background-color: var(--basic-white);
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.4;
 }
 
-.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:hover::after,
 .filter-input-checkbox:checked + label:hover::after {
   opacity: 1;
 }
 
 /* ------------------- сделать элементы заблокированными ---------------  */
+
+/* filter-button */
 
 .filter-button {
   color: var(--basic-black);
@@ -1041,15 +1039,49 @@ img {
   padding: 17px 89px 15px 88px;
 }
 
+.filter-button:hover {
+  background-color: var(--basic-low-gray);
+}
+
+.filter-button:active {
+  color: var(--basic-dark-gray);
+  background-color: var(--basic-high-gray);
+  box-shadow: var(--basic-shadow-box);
+}
+
 /* sorting-filters */
 
+
+.sorting-filter {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 48px;
+}
+
+.sorting-filter span {
+  margin-right: 266px; /* отступ до sorting-filter-list */
+}
+
 .sorting-filter-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  width: 298px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.sorting-filter-item {
+  margin-right: 26px;
+
+}
+
+.sorting-filter-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .sorting-filter-item a {
@@ -1075,12 +1107,29 @@ img {
 }
 
 
+.triangle-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.triangle-item {
+  margin-right: 18px; /* отступ между треугольниками */
+}
+
+.triangle-item:nth-child(2n) {
+  margin-right: 0;
+}
 
 .triangle-down::before {
   content: "";
   position: absolute; /* треугольник вниз */
   top: 5px;
-  right: 5px;
+  right: -2px;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 11px solid var(--basic-dark-black);
@@ -1090,7 +1139,7 @@ img {
   content: "";
   position: absolute; /* треугольник вверх */
   top: 5px;
-  right: 5px;
+  right: -2px;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-bottom: 11px solid var(--basic-dark-black);
@@ -1101,7 +1150,6 @@ img {
   opacity: 0.3;
   position: relative; /* для треугольников вверх и вниз */
 }
-
 
 .triangle-item a:hover {
   color: var(--basic-dark-black);
@@ -1118,56 +1166,6 @@ img {
 .triangle-item-current a:active {
   color: var(--basic-dark-black);
   opacity: 1;
-}
-
-
-/* Flex for filtres */
-
-
-.sorting-filter {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 48px;
-}
-
-.triangle-list {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  width: 60px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.triangle-item {
-  margin-right: 18px;
-}
-
-.triangle-item:nth-child(2n) {
-  margin-right: 0;
-}
-
-.sorting-filter span {
-  margin-right: 266px;
-}
-
-.sorting-filter-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 298px;
-  margin: 0;
-  padding: 0;
-  margin-right:auto;
-}
-
-.sorting-filter-item {
-  margin-right: 26px;
-}
-
-.sorting-filter-item:nth-child(3n) {
-  margin-right: 0;
 }
 
 /* Templates */
@@ -1230,7 +1228,7 @@ img {
   flex-direction: column;
   align-items: flex-start;
   flex-basis: 360px;
-  margin-top: 40px;
+  margin-top: 26px;
   margin-right: 40px;
   position: relative; /* для шапок шаблонов */
 }
@@ -1247,7 +1245,7 @@ img {
 .template-item::before {
 content: "";
 position: absolute; /* шапка шаблона */
-top: -40px;
+top: -26px;
 width: 360px;
 height: 40px;
 border-top-left-radius: 3px;
@@ -1259,7 +1257,7 @@ opacity: 0.12;
 .template-item:hover::before {
 content: "";
 position: absolute; /* шапка шаблона */
-top: -40px;
+top: -26px;
 width: 360px;
 height: 40px;
 border-top-left-radius: 3px;
@@ -1270,15 +1268,16 @@ opacity: 1;
 
 
 .templates-button button {
+  content: "";
+  position: absolute; /* декоративные кнопки в шапке */
+  top: -13px;
+  left: 15px;
   background-color: var(--basic-white);
   width: 14px;
   height: 14px;
   border-radius: 50%;
   border: none;
-  content: "";
-  position: absolute; /* декоративные кнопки в шапке */
-  top: -27px;
-  left: 15px;
+
 }
 
 .templates-button button {
