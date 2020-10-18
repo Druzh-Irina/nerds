@@ -15,6 +15,8 @@
   --basic-medium-gray: #666666;
   --basic-middle-gray: #888888;
   --basic-hyper-gray: #DBDBDB;
+  --basic-pale-gray: #D7DCDE;
+  --basic-full-gray: #B4B9BB;
   --basic-extra-gray: #4D4D4D;
   --basic-bright-gray: #E1E1E1;
   --basic-light-gray: #C1C1C1;
@@ -36,6 +38,7 @@
   --basic-dark-yellow: #E5A722;
 
   --basic-shadow-box: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  --basic-popup-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   --basic-shadow-gray: 0px 6px 15px rgba(0, 1, 1, 0.25);
   --basic-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
   --basic-drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -587,6 +590,7 @@ img {
 
 .statistics-item {
   display: flex; /* Ставит % возле цифр */
+  flex-wrap: wrap;
 }
 
 .statistics-desc {
@@ -676,10 +680,46 @@ img {
 
 /* Map */
 
+.map-container {
+  width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative; /* позиция для адреса и карты */
+}
+
+.map img {
+  width: 1440px;
+  height: 416px;
+  margin: 0 auto;
+}
+
+/* marker */
+
+.marker {
+  content: "";
+  position: absolute; /* маркер на карте */
+  top: 86px;
+  right: 407px;
+}
 
 /* Contacts */
 
+.contacts {
+  content: "";
+  position: absolute; /* контакты на карте */
+  width: 319px;
+  min-height: 308px;
+  padding: 49px 39px 47px 50px;
+  background-color: var(--basic-white);
+  box-sizing: border-box;
+  top: 55px;
+  left: 160px;
+}
+
 .contacts-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 23px; /* отступ от заголовка к адресу */
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -687,12 +727,15 @@ img {
 }
 
 .contacts-address,
-.contacts-phone {
+.contacts-phone,
+.contacts-phone-number {
   line-height: 18px;
   color: var(--basic-medium-gray);
 }
 
 .contacts-button {
+  margin-top: 37px; /* отступ между телефоном и ссылкой "Напишите нам" */
+  padding: 17px 44px 15px 44px;
   background-color: var(--basic-red);
 }
 
@@ -703,6 +746,160 @@ img {
 .contacts-button:active {
   background-color: var(--basic-dark-red);
   box-shadow: var(--basic-shadow-box);
+}
+
+
+.interactive-map-container {
+  width: 100%;
+  position: relative;
+}
+
+.interactive-map-container iframe {
+  display: none;
+  width: 100%;
+  height: 416px;
+  position: absolute;
+  bottom: 7px;
+}
+
+
+/* Modal-login form */
+
+.write-to-us-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.surname-and-email {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 760px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 680px;
+  right: 0;
+  bottom: 180px;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  width: 960px;
+	min-height: 590px;
+  background-image: url("../img/popup-write-to-us.jpg");
+  box-shadow: var(--basic-popup-shadow);
+  padding: 63px 99px 84px 100px;
+  box-sizing: border-box;
+}
+
+.modal h2 {
+  margin: 0;
+  margin-bottom: 37px; /* отступ от заголовка "Напишите нам" до названия лэйблов */
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.modal-description label {
+  display: block;
+  margin: 0;
+  margin-bottom: 9px; /* отступ от названия лэйблов до ячеек */
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.modal-description input {
+  width: 360px;
+  min-height: 50px;
+  padding: 16px 14px 16px 16px;
+  background-color: var(basic-white);
+  border: 2px solid var(--basic-pale-gray);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.modal-description input:hover {
+  border: 2px solid var(--basic-full-gray);
+}
+
+.modal-description input:focus {
+  border: 2px solid var(--basic-black);
+}
+
+.modal-description input:invalid {
+  border: 2px solid var(--basic-medium-red);
+  color: var(--basic-medium-red)
+}
+
+.modal-description .letter-icon {
+  width: 760px;
+  min-height: 118px;
+  box-sizing: border-box;
+  padding: 16px 14px 84px 16px;
+}
+
+.letter-icon {
+  margin-bottom: 27px; /* отступ до кнопки "Отправить"*/
+}
+
+.modal-button {
+  padding: 17px 83px 15px 83px;
+  background-color: var(--basic-red);
+}
+
+.modal-button:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.modal-button:active {
+  background-color: var(--basic-dark-red);
+  box-shadow: var(--basic-shadow-box);
+}
+
+.modal-close {
+  position: absolute;
+  top: 87px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  background-color: var(--basic-white);
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  width: 21px;
+  height: 3px;
+  background-color: var(--basic-red);
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+  box-shadow: var(--basic-drop-shadow);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+  box-shadow: var(--basic-drop-shadow);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after {
+  opacity: 1;
+}
+
+.modal-close:active::before,
+.modal-close:active::after {
+  opacity: 0.1;
 }
 
 /* Social and sale */
@@ -785,7 +982,6 @@ img {
 .sale .sale-desc {
   margin-bottom: 74px;
 }
-
 
 
 /* ========== Catalog page - header ========== */
@@ -994,7 +1190,11 @@ img {
   opacity: 1;
 }
 
-/* ------------------- сделать элементы заблокированными ---------------  */
+
+.filter-input-radio + label:disabled::before,
+.filter-input-radio:checked + label:disabled::after {
+  opacity: 0.1;
+}
 
 /* filter checkbox */
 
@@ -1029,7 +1229,10 @@ img {
   opacity: 1;
 }
 
-/* ------------------- сделать элементы заблокированными ---------------  */
+.filter-input-checkbox + label:disabled::after,
+.filter-input-checkbox:checked + label:disabled::after {
+  opacity: 0.1;
+}
 
 /* filter-button */
 
@@ -1255,14 +1458,6 @@ opacity: 0.12;
 }
 
 .template-item:hover::before {
-content: "";
-position: absolute; /* шапка шаблона */
-top: -26px;
-width: 360px;
-height: 40px;
-border-top-left-radius: 3px;
-border-top-right-radius: 3px;
-background-color: var(--basic-extra-gray);
 opacity: 1;
 }
 
