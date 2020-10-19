@@ -125,7 +125,6 @@ img {
 }
 
 .page-body {
-  min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -535,6 +534,7 @@ img {
 
 .statistics::before {
   content: "";
+  position: relative;
   width: 360px;
   min-height: 208px;
   background-image: url("../img/nerds-illustration.png");
@@ -574,6 +574,7 @@ img {
 
 .statistics{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   flex-basis: 360px;
   margin: 0 0 0 auto;
@@ -583,6 +584,7 @@ img {
 
 .statistics-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0 11px 0;
   padding: 0;
   list-style: none;
@@ -595,6 +597,7 @@ img {
 
 .statistics-desc {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .statistics-desc-1 {
@@ -622,6 +625,7 @@ img {
   list-style: none;
 }
 
+
 .partner-link img {
   background-color: var(--basic-background-white);
   opacity: 0.2;
@@ -639,12 +643,12 @@ img {
 
 /* Partners border */
 .partners {
-  position: relative;
+  position: relative; /* позиция для горизонтальных серых бордеров */
 }
 
 .partners::after {
   content: "";
-  position: absolute;
+  position: absolute; /* верхний горизонтальный серый бордер */
   bottom: 150px;
   width: 1158px;
   border: 2px solid var(--basic-gray);
@@ -652,18 +656,18 @@ img {
 
 .partners::before {
   content: "";
-  position: absolute;
+  position: absolute; /* нижний горизонтальный серый бордер */
   top: 120px;
   width: 1158px;
   border: 2px solid var(--basic-gray);
 }
 .partners-item {
-  position: relative;
+  position: relative; /* позиция для вертикальных серых бордеров */
 }
 
 .partners-item::before {
   content: "";
-  position: absolute;
+  position: absolute; /* вертикальные серые бордеры */
   top: 5px;
   left: 250px;
   height: 52px;
@@ -678,19 +682,30 @@ img {
 
 /* ========== Index page - footer ========== */
 
-/* Map */
+/* Maps */
 
-.map-container {
-  width: 1440px;
-  padding: 0 20px;
-  margin: 0 auto;
-  position: relative; /* позиция для адреса и карты */
-}
-
-.map img {
-  width: 1440px;
+.map{
+  width: 1160px;
   height: 416px;
   margin: 0 auto;
+}
+
+.interactive-map-container {
+  width: 100%;
+  position: relative;
+}
+
+.interactive-map{
+  display: none;
+  width: 99.9%;
+  height: 416px;
+  position: absolute;
+  bottom: 7px;
+  z-index: 2;
+}
+
+.location {
+  position: relative; /* позиция для адреса и маркера */
 }
 
 /* marker */
@@ -698,28 +713,30 @@ img {
 .marker {
   content: "";
   position: absolute; /* маркер на карте */
-  top: 86px;
-  right: 407px;
+  bottom: 140px;
+  right: 266px;
+  z-index: 1;
 }
 
 /* Contacts */
 
 .contacts {
+  display: flex;
+  flex-wrap: wrap;
   content: "";
   position: absolute; /* контакты на карте */
   width: 319px;
   min-height: 308px;
-  padding: 49px 39px 47px 50px;
+  padding: 47px 39px 47px 48px;
   background-color: var(--basic-white);
   box-sizing: border-box;
-  top: 55px;
-  left: 160px;
+  bottom: 60px;
+  z-index: 2;
 }
 
 .contacts-title {
   padding: 0;
   margin: 0;
-  margin-bottom: 23px; /* отступ от заголовка к адресу */
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -730,12 +747,13 @@ img {
 .contacts-phone,
 .contacts-phone-number {
   line-height: 18px;
+  margin: 0;
   color: var(--basic-medium-gray);
 }
 
 .contacts-button {
-  margin-top: 37px; /* отступ между телефоном и ссылкой "Напишите нам" */
-  padding: 17px 44px 15px 44px;
+  margin-top: 30px; /* отступ между номером телефона и ссылкой "Напишите нам" */
+  padding: 17px 44px 0px 44px;
   background-color: var(--basic-red);
 }
 
@@ -747,21 +765,6 @@ img {
   background-color: var(--basic-dark-red);
   box-shadow: var(--basic-shadow-box);
 }
-
-
-.interactive-map-container {
-  width: 100%;
-  position: relative;
-}
-
-.interactive-map-container iframe {
-  display: none;
-  width: 100%;
-  height: 416px;
-  position: absolute;
-  bottom: 7px;
-}
-
 
 /* Modal-login form */
 
@@ -781,18 +784,19 @@ img {
 .modal {
   display: none;
   position: fixed;
-  top: 680px;
+  top: 0;
   right: 0;
   bottom: 180px;
   left: 0;
   margin: auto;
   color: var(--basic-black);
   width: 960px;
-	min-height: 590px;
+	height: 590px;
   background-image: url("../img/popup-write-to-us.jpg");
   box-shadow: var(--basic-popup-shadow);
   padding: 63px 99px 84px 100px;
   box-sizing: border-box;
+  z-index: 31; /* убирает просвечивание сквозь попап других элементов страницы */
 }
 
 .modal h2 {
@@ -861,12 +865,12 @@ img {
 
 .modal-close {
   position: absolute;
-  top: 87px;
-  right: 90px;
-  width: 21px;
-  height: 21px;
-  background-color: var(--basic-white);
+  top: 85px;
+  right: 85px;
+  width: 28px;
+  height: 28px;
   border: none;
+  background: none;
   cursor: pointer;
 }
 
@@ -874,22 +878,24 @@ img {
 .modal-close::after {
   content: "";
   position: absolute;
+  bottom: 12px;
   right: 1px;
   width: 21px;
-  height: 3px;
+  height: 2px;
+  border: 1px solid var(--basic-red);
   background-color: var(--basic-red);
+  border-radius: 2px;
+  box-shadow: var(--basic-drop-shadow);
   cursor: pointer;
   opacity: 0.3;
 }
 
 .modal-close::before {
   transform: rotate(45deg);
-  box-shadow: var(--basic-drop-shadow);
 }
 
 .modal-close::after {
   transform: rotate(-45deg);
-  box-shadow: var(--basic-drop-shadow);
 }
 
 .modal-close:hover::before,
@@ -915,6 +921,7 @@ img {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  width: 261px;
   margin: 68px 0 68px 0;
   padding: 0;
   list-style: none;
@@ -931,6 +938,7 @@ img {
 
 .social-button {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 81px;

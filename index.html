@@ -62,8 +62,8 @@
     </div>
   </header>
 
-  <main class="page-main">
-    <div class="page-main-wrapper container">
+  <main class="page-main  container">
+    <div class="page-main-wrapper">
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
         <ul class="services-list">
@@ -160,13 +160,21 @@
     </div>
   </main>
 
-  <footer class="page-footer">
-    <div class="map-container">
-      <section class="map">
-        <h2 class="visually-hidden">Карта</h2>
-        <img src="img/map.jpg" width="1440" height="416" alt="карта с адресом nёrds">
-      </section>
 
+  <footer class="page-footer">
+
+    <section class="maps">
+      <h2 class="visually-hidden">Карта</h2>
+      <div class="container">
+        <img class="map" src="img/map.jpg" width="1160" height="416" alt="карта с адресом nёrds">
+      </div>
+
+      <div class="interactive-map-container">
+        <iframe class="interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.58095197757!2d30.319410323390894!3d59.93909537160517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603140540112!5m2!1sru!2sru" width="1160" height="416" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+      </div>
+    </section>
+
+    <div class="location container">
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
         <p class="contacts-title">Nёrds design studio</p>
@@ -176,18 +184,13 @@
         <p class="contacts-phone">тел.
           <a class="contacts-phone-number" href="tel:+78122757575">+7 (812) 275-75-75</a>
         </p>
-        <a class="button contacts-button" href="#">НАПИШИТЕ НАМ</a>
+        <a class="button contacts-button" href="#">Напишите нам</a>
       </section>
 
       <section class="marker">
         <h2 class="visually-hidden">маркер nёrd's на карте</h2>
         <img src="img/map-marker.png" width="231" height="190" alt="маркер nёrd's на карте">
       </section>
-    </div>
-
-
-    <div class="interactive-map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603043776548!5m2!1sru!2sru" width="1440" height="416" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     </div>
 
     <div class="footer-wrapper container">
@@ -228,6 +231,9 @@
       </section>
     </div>
   </footer>
+
+
+
 
   <section class="modal">
     <h2>Напишите нам</h2>
