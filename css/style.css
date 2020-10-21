@@ -696,8 +696,8 @@ img {
 }
 
 .interactive-map{
-  display: none;
-  width: 99.9%;
+  width: 100%;
+  border: none;
   height: 416px;
   position: absolute;
   bottom: 7px;
@@ -1061,12 +1061,10 @@ img {
   border: none;
 }
 
-
 .range-filter {
   width: 260px;
   margin-top: 48px;
 }
-
 
 .range-controls {
   position: relative;
@@ -1262,7 +1260,6 @@ img {
 
 /* sorting-filters */
 
-
 .sorting-filter {
   display: flex;
   justify-content: flex-start;
@@ -1385,47 +1382,6 @@ img {
   margin-bottom: 24px; /* отступ до пагинации */
 }
 
-.template-price-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-black);
-}
-
-.template-price-title:hover {
-  color: var(--basic-red);
-}
-
-.template-price-title:active {
-  color: var(--basic-black);
-  opacity: 0.3;
-}
-
-.template-price-text {
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  color: var(--basic-medium-gray)
-}
-
-.template-price-button {
-  background-color: var(--basic-red);
-}
-
-.template-price-button:hover {
-  background-color: var(--basic-medium-red);
-}
-
-.template-price-button:active {
-  color: var(--basic-white);
-  background-color: var(--basic-dark-red);
-  box-shadow: var(--basic-shadow-box);
-}
-
-/* Flex for templates */
-
 .template-list {
   display: flex;
   flex-wrap: wrap;
@@ -1451,6 +1407,7 @@ img {
 .template-picture {
   margin-left: 1px;
   margin-bottom: 31px;
+  box-shadow: var(--basic-drop-shadow);
 }
 
 .template-item::before {
@@ -1468,7 +1425,6 @@ opacity: 0.12;
 .template-item:hover::before {
 opacity: 1;
 }
-
 
 .templates-button button {
   content: "";
@@ -1493,7 +1449,72 @@ opacity: 1;
   width: 60px;
 }
 
+.template-popup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  content: "";
+  position: absolute; /* попапы */
+  width: 360px;
+  height: 231px;
+  box-sizing: border-box;
+  padding: 26px 53px 44px 52px;
+  background-color: var(--basic-gray);
+  box-shadow: var(--basic-drop-shadow);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: none;
+  top: 360px;
+  opacity: 0;
+}
 
+.template-item:hover .template-popup,
+.template-item:focus .template-popup {
+  opacity: 1; /* При наведении на шаблон показывается попап */
+}
+
+.template-price-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.template-price-title:hover {
+  color: var(--basic-red);
+}
+
+.template-price-title:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.template-price-text {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-medium-gray)
+}
+
+.template-price-button {
+  padding: 17px 72px 15px 72px;
+  background-color: var(--basic-red);
+}
+
+.template-price-button:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.template-price-button:active {
+  color: var(--basic-white);
+  background-color: var(--basic-dark-red);
+  box-shadow: var(--basic-shadow-box);
+}
 
 /* Pagination */
 
