@@ -155,7 +155,7 @@
       <img class="template-picture" src="img/img-sedona.jpg" width="358" height="578" alt="Главная страница сайта, фото достопримечательностей города и обзор преимуществ для туризма">
       <div class="template-popup">
         <a class="template-price-title" href="#">Sedona</a>
-        <p class="template-price-text">Информационный сайт<br> для туристов</p>
+        <p class="template-price-text-sedona">Информационный сайт для туристов</p>
         <a class="button template-price-button" href="#">9 900 ₽</a>
       </div>
     </li>
@@ -328,16 +328,13 @@
   </div>
 </footer>
 
-
-
-
 <section class="modal">
   <h2>Напишите нам</h2>
   <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
     <div class="surname-and-email">
       <p class="modal-description">
         <label for="name">Ваше имя:</label>
-        <input class="name-icon" id="name" type="text" name="name" placeholder="Имя Фамилия">
+        <input class="name-icon" id="name" type="text" name="login" placeholder="Имя Фамилия">
       </p>
       <p class="modal-description">
         <label for="email">Ваш email:</label>
@@ -346,7 +343,7 @@
     </div>
     <p class="modal-description">
       <label for="letter">Текст письма:</label>
-      <input class="letter-icon" id="letter" type="text" name="text-of-letter" placeholder="В свободной форме">
+      <textarea class="letter-icon" id="letter" name="text-of-letter" rows="4" placeholder="В свободной форме"></textarea>
     </p>
     <button class="button modal-button" type="submit">Отправить</button>
   </form>
