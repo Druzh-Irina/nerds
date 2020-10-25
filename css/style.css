@@ -219,7 +219,7 @@ img {
   margin-top: 75px;
 }
 
-.cart::before {
+.cart::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -802,7 +802,6 @@ img {
 }
 
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -845,24 +844,30 @@ img {
   box-sizing: border-box;
 }
 
-.modal-description input:hover {
+.modal-description textarea {
+  width: 760px;
+  min-height: 118px;
+  padding: 16px 14px 16px 16px;
+  background-color: var(basic-white);
+  border: 2px solid var(--basic-pale-gray);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.modal-description input:hover,
+.modal-description textarea:hover {
   border: 2px solid var(--basic-full-gray);
 }
 
-.modal-description input:focus {
+.modal-description input:focus,
+.modal-description textarea:focus {
   border: 2px solid var(--basic-black);
 }
 
-.modal-description input:invalid {
+.modal-description input:invalid,
+.modal-description textarea:invalid {
   border: 2px solid var(--basic-medium-red);
   color: var(--basic-medium-red)
-}
-
-.modal-description .letter-icon {
-  width: 760px;
-  min-height: 118px;
-  box-sizing: border-box;
-  padding: 16px 14px 84px 16px;
 }
 
 .letter-icon {
@@ -1350,7 +1355,6 @@ img {
   color: var(--basic-black);
   opacity: 1;
 }
-
 
 .triangle-list {
   display: flex;
