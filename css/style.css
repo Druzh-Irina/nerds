@@ -484,6 +484,7 @@ img {
   margin-bottom: 121px;
   display: flex;
   min-height: 413px;
+  position: relative; /* позиция для картинки nerds */
 }
 
 .features-slogan {
@@ -545,15 +546,17 @@ img {
 
 /* Statistics */
 
-.statistics::before {
+
+.features-and-statistics::before {
   content: "";
-  position: relative;
+  position: absolute;
   width: 360px;
-  min-height: 208px;
+  height: 208px;
+  right: 0px;
   background-image: url("../img/nerds-illustration.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  margin: 0 0 37px 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -585,15 +588,14 @@ img {
   line-height: 18px;
 }
 
-.statistics{
+.statistics {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   flex-basis: 360px;
   margin: 0 0 0 auto;
-  padding: 0;
+  padding: 245px 0 0 0;
 }
-
 
 .statistics-list {
   display: flex;
@@ -802,7 +804,7 @@ img {
 }
 
 .modal {
-
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -935,6 +937,57 @@ img {
 .modal-close:active::before,
 .modal-close:active::after {
   opacity: 0.1;
+}
+
+.modal-show {
+  display: block;  /* класс, созданный в script.js */
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s; /* класс, созданный в script.js */
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 /* Social and sale */
