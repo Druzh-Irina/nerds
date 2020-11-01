@@ -5,22 +5,22 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body  class="page-body">
 
-  <header class="main-header">
+  <header class="main-header inner-header">
     <div class="container">
       <nav class="main-navigation">
         <a class="inner-header-logo" href="index.html">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="логотип nёrds">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="чёрный логотип nёrds на белом фоне">
         </a>
         <ul class="site-navigation">
           <li class="site-link"><a href="#">Студия</a></li>
           <li class="site-link"><a href="#">Клиенты</a></li>
           <li class="site-link navigation-current"><a href="catalog.html">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="site-link"><a href="#">Контакты</a></li>
         </ul>
         <div class="user-navigation">
           <a class="cart" href="#">Корзина</a>
@@ -46,10 +46,10 @@
               </div>
             </div>
             <div class="toggle toggle-min" tabindex="0" style="
-            left: 5%">
+            left: 7%">
           </div>
           <div class="toggle toggle-max" tabindex="0" style="
-          left: 60%">
+          left: 62%">
         </div>
       </div>
 
@@ -109,12 +109,9 @@
       </li>
     </ul>
   </fieldset>
-
-
   <button type="submit" class="filter-button button">Показать</button>
 </form>
 </section>
-
 
 <section class="sorting-filter">
   <h2 class="visually-hidden">Фильтр сортировки</h2>
@@ -227,7 +224,7 @@
         <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
         <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
       </div>
-        <img class="template-picture" src="img/img-kvast.jpg" width="358" height="578" alt="Главная страница сайта, фоновое изображение с колосьями ржи, фотографии стеклянных бутылок кваса с описанием разновидностей">
+      <img class="template-picture" src="img/img-kvast.jpg" width="358" height="578" alt="Главная страница сайта, фоновое изображение с колосьями ржи, фотографии стеклянных бутылок кваса с описанием разновидностей">
       <div class="template-popup">
         <a class="template-price-title" href="#">КВАСТ</a>
         <p class="template-price-text">Промо-сайт производителя<br>  крафтового кваса</p>
@@ -280,7 +277,7 @@
       <p class="contacts-phone">тел.
         <a class="contacts-phone-number" href="tel:+78122757575">+7 (812) 275-75-75</a>
       </p>
-      <a class="button contacts-button" href="#">Напишите нам</a>
+      <a class="button contacts-button" href="modal.html">Напишите нам</a>
     </section>
 
     <section class="marker">
@@ -350,7 +347,7 @@
   <button class="modal-close" type="button" aria-label="Закрыть"></button>
 </section>
 
-<script src="js/popup.js"></script>
+<script src="js/popup.min.js"></script>
 
 </body>
 </html>
