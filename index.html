@@ -5,13 +5,13 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
 
   <header class="main-header">
-    <div class="header-container container">
+    <div class="container">
       <nav class="main-navigation">
         <a class="main-header-logo">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="чёрный логотип nёrds на белом фоне">
@@ -31,31 +31,36 @@
 
       <section class="photoslides">
         <h2 class="visually-hidden">Фотослайды</h2>
-        <ul  class="photoslides-list">
-          <li class="photoslides-item-1 slide-current">
-            <h3>Долго, дорого,<br> скрупулезно.</h3>
-            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-            <a class="button photoslides-know-button" href="#">Узнать больше</a>
-            <img src="img/nerds-index-slide-1.png" width="760" height="431" alt="3 телефона">
-          </li>
-          <li class="photoslides-item-2 slide">
-            <h3>Любим математику<br> как никто другой</h3>
-            <p>Никакого креатива, только математические формулы<br> для расчета идеальных пропорций</p>
-            <a class="button photoslides-know-button" href="#">Узнать больше</a>
-            <img src="img/nerds-index-slide-2.png" width="760" height="431" alt="2 компьютера">
-          </li>
-          <li class="photoslides-item-3 slide">
-            <h3>Только ночь,<br> только хардкор</h3>
-            <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
-            <a class="button photoslides-know-button" href="#">Узнать больше</a>
-            <img src="img/nerds-index-slide-3.png" width="760" height="431" alt="планшет и телефон">
-          </li>
-        </ul>
-        <div class="photoslides-controls">
-          <button class="current" type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
-        </div>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <input class="visually-hidden slide-1" type="radio" id="slide-1" name="toggle" checked>
+          <input class="visually-hidden slide-2" type="radio" id="slide-2" name="toggle">
+          <input class="visually-hidden slide-3" type="radio" id="slide-3" name="toggle">
+          <div class="photoslides-controls">
+            <label class="slider-controls-1" for="slide-1" aria-label="Первый слайд"></label>
+            <label class="slider-controls-2" for="slide-2" aria-label="Второй слайд"></label>
+            <label class="slider-controls-3" for="slide-3" aria-label="Третий слайд"></label>
+          </div>
+          <ul class="photoslides-list">
+            <li class="photoslides-item photoslides-item-1">
+              <h3>Долго, дорого,<br> скрупулезно.</h3>
+              <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+              <a class="button photoslides-know-button" href="#">Узнать больше</a>
+              <img src="img/nerds-index-slide-1.png" width="760" height="431" alt="3 телефона">
+            </li>
+            <li class="photoslides-item photoslides-item-2">
+              <h3>Любим математику как никто другой</h3>
+              <p>Никакого креатива, только математические формулы<br> для расчета идеальных пропорций.</p>
+              <a class="button photoslides-know-button" href="#">Узнать больше</a>
+              <img src="img/nerds-index-slide-2.png" width="760" height="431" alt="2 компьютера">
+            </li>
+            <li class="photoslides-item photoslides-item-3">
+              <h3>Только ночь,<br> только хардкор</h3>
+              <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+              <a class="button photoslides-know-button" href="#">Узнать больше</a>
+              <img src="img/nerds-index-slide-3.png" width="760" height="431" alt="планшет и телефон">
+            </li>
+          </ul>
+        </form>
       </section>
     </div>
   </header>
@@ -172,7 +177,7 @@
         <img class="map" src="img/map.jpg" width="1160" height="416" alt="карта с адресом nёrds">
       </div>
 
-      <div class="interactive-map-container">
+      <div class="interactive-map-container" id="interactive-map">
         <iframe class="interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.58095197757!2d30.319410323390894!3d59.93909537160517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603140540112!5m2!1sru!2sru" width="1160" height="416" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
       </div>
     </section>
@@ -235,29 +240,31 @@
     </div>
   </footer>
 
-  <section class="modal">
-    <h2>Напишите нам</h2>
-    <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="surname-and-email">
-        <p class="modal-description">
-          <label for="name">Ваше имя:</label>
-          <input class="name-icon" id="name" type="text" name="login" placeholder="Имя Фамилия">
+  <!-- write-to-us-form -->
+    <section class="modal">
+      <h2>Напишите нам</h2>
+      <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="surname-and-email">
+          <p class="name-icon">
+            <label for="name">Ваше имя:</label>
+            <input class="login-icon-user" id="name" type="text" name="login" placeholder="Имя Фамилия">
+          </p>
+          <p class="mail-icon">
+            <label for="email">Ваш email:</label>
+            <input class="login-icon-mail" id="email" type="email" name="email" placeholder="email@example.com">
+          </p>
+        </div>
+        <p class="letter-icon">
+          <label for="letter">Текст письма:</label>
+          <textarea  class="login-icon-letter" id="letter" name="text-of-letter" placeholder="В свободной форме"></textarea>
         </p>
-        <p class="modal-description">
-          <label for="email">Ваш email:</label>
-          <input class="mail-icon" id="email" type="email" name="email" placeholder="email@example.com">
-        </p>
-      </div>
-      <p class="modal-description">
-        <label for="letter">Текст письма:</label>
-        <textarea class="letter-icon" id="letter" name="text-of-letter" rows="4" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button modal-button" type="submit">Отправить</button>
-    </form>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
-  </section>
+        <button class="button modal-button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </section>
 
-  <script src="js/popup.min.js"></script>
+  <!-- JavaScript -->
+    <script src="js/script.js"></script>
 
-</body>
-</html>
+  </body>
+  </html>

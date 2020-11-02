@@ -5,7 +5,7 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body  class="page-body">
@@ -197,7 +197,7 @@
       <img class="template-picture" src="img/img-mishka.jpg" width="358" height="578" alt="Главная страница сайта, фотографии вязаных изделий с указанием параметров и цены, информация о преимуществах магазина">
       <div class="template-popup">
         <a class="template-price-title" href="#">MISHKA</a>
-        <p class="template-price-text">Интернет магазин <br> вязанных игрушек</p>
+        <p class="template-price-text">Интернет магазин <br> вязаных игрушек</p>
         <a class="button template-price-button" href="#">9 900 ₽</a>
       </div>
     </li>
@@ -325,29 +325,31 @@
   </div>
 </footer>
 
-<section class="modal">
-  <h2>Напишите нам</h2>
-  <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
-    <div class="surname-and-email">
-      <p class="modal-description">
-        <label for="name">Ваше имя:</label>
-        <input class="name-icon" id="name" type="text" name="login" placeholder="Имя Фамилия">
+<!-- write-to-us-form -->
+  <section class="modal">
+    <h2>Напишите нам</h2>
+    <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="surname-and-email">
+        <p class="name-icon">
+          <label for="name">Ваше имя:</label>
+          <input class="login-icon-user" id="name" type="text" name="login" placeholder="Имя Фамилия">
+        </p>
+        <p class="mail-icon">
+          <label for="email">Ваш email:</label>
+          <input class="login-icon-mail" id="email" type="email" name="email" placeholder="email@example.com">
+        </p>
+      </div>
+      <p class="letter-icon">
+        <label for="letter">Текст письма:</label>
+        <textarea  class="login-icon-letter" id="letter" name="text-of-letter" placeholder="В свободной форме"></textarea>
       </p>
-      <p class="modal-description">
-        <label for="email">Ваш email:</label>
-        <input class="mail-icon" id="email" type="email" name="email" placeholder="email@example.com">
-      </p>
-    </div>
-    <p class="modal-description">
-      <label for="letter">Текст письма:</label>
-      <textarea class="letter-icon" id="letter" name="text-of-letter" rows="4" placeholder="В свободной форме"></textarea>
-    </p>
-    <button class="button modal-button" type="submit">Отправить</button>
-  </form>
-  <button class="modal-close" type="button" aria-label="Закрыть"></button>
-</section>
+      <button class="button modal-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
 
-<script src="js/popup.min.js"></script>
+<!-- JavaScript -->
+  <script src="js/script.js"></script>
 
 </body>
 </html>

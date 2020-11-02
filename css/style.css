@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* Variables */
 
 :root {
@@ -95,7 +102,7 @@ img {
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -288,14 +295,6 @@ Index page - header
 
 /* Photoslides */
 
-.slide {
-  display: none;
-}
-
-.slide-current {
-  display: block;
-}
-
 .photoslides-list {
   display: flex;
   flex-wrap: wrap;
@@ -307,21 +306,24 @@ Index page - header
   list-style: none;
 }
 
-.photoslides-item-1 h3 {
-  margin-top: 79px; /* до логотипа nёrds */
-  margin-bottom: 25px; /* отступ между заголовком и текстом в слайде-1 */
+.photoslides-item {
+  display: none;
+  padding: 24px 0 80px 0; /* верхний отступ от логотипа nerds до заголовка и нижний отступ от кнопки "узнать больше" до конца фона в header */
+}
+
+.photoslides-item h3 {
   font-size: 55px;
   line-height: 55px;
   color: var(--basic-black);
 }
 
+.photoslides-item-1 h3 {
+  margin-bottom: 25px; /* отступ между заголовком и текстом в слайде-1 */
+}
+
 .photoslides-item-2 h3,
 .photoslides-item-3 h3 {
-  margin-top: 79px;
   margin-bottom: 37px; /* отступ между заголовком и текстом в слайде-2 и слайде-3 */
-  font-size: 55px;
-  line-height: 55px;
-  color: var(--basic-black);
 }
 
 .photoslides-item-1 p {
@@ -333,11 +335,9 @@ Index page - header
   margin-bottom: 27px; /* отступ до кнопки "узнать больше" в слайде-2 и слайде-3*/
 }
 
+
 .photoslides-know-button {
-  display: inline-block;
-  vertical-align: top;
-  padding: 17px 54px 15px 54px;
-  margin-bottom: 80px; /* до конца фона header */
+  padding: 17px 55px 15px 54px;
   background-color: var(--basic-red);
 }
 
@@ -351,54 +351,74 @@ Index page - header
   box-shadow: var(--basic-shadow-box);
 }
 
-.header-container {
-  position: relative; /* для фотослайдов и слайд-кнопок */
-}
-
-.photoslides img {
+.photoslides-list img {
   position: absolute;
-  top: 114px;
-  left: 417px;
+  top: 0px;
+  left: 397px;
   width: 760px;
   min-height: 431px;
   -o-object-fit: contain;
-     object-fit: contain; /* на случай добавления картинки больше, чем заданные размеры */
-  background-color: var(--basic-gray); /* фон на случай, если картинка не прогрузится */
+  object-fit: contain; /* на случай добавления картинки больше, чем заданные размеры */
+}
+
+.photoslides {
+  position: relative; /* позиция для контейнера с кнопками в слайдере */
 }
 
 .photoslides-controls {
-  position: absolute;
-  left: 556px;
-  top: 431px;
+  position: absolute; /* контейнер с кнопоками в слайдере */
+  left: 528px;
+  top: 309px;
   z-index: 20;
+  width: 88px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 88px;
 }
 
-.photoslides-controls button {
-  padding: 0;
+.photoslides-controls label {
+  position: relative; /* позиция для кнопок слайдера */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: none;
+  cursor: pointer;
+}
+
+.photoslides-controls label::after {
+  content: '';
+  position: absolute; /* кнопки слайдера */
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
   background-color: var(--basic-white);
 }
 
-.photoslides-controls .current {
-  position: relative; /* для серого круга внутри кнопки слайда */
+.slide-1:checked ~ .photoslides-list .photoslides-item-1,
+.slide-2:checked ~ .photoslides-list .photoslides-item-2,
+.slide-3:checked ~ .photoslides-list .photoslides-item-3 {
+  display: block;
 }
 
-.photoslides-controls .current::after {
-  content: "";
+.slide-1:checked ~ .photoslides-controls .slider-controls-1::before,
+.slide-2:checked ~ .photoslides-controls .slider-controls-2::before,
+.slide-3:checked ~ .photoslides-controls .slider-controls-3::before {
+  content: '';
   position: absolute; /* серый круг внутри кнопки слайда */
-  box-sizing: border-box;
-  width: 8px;
-  height: 8px;
-  top: 5px;
-  left: 5px;
+  z-index: 2;
+  top: 13px;
+  left: 13px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   border: 2px solid var(--basic-light-gray);
+  background-color: inherit;
 }
 
 /* ====================
@@ -435,7 +455,7 @@ Index page - main
   width: 300px;
   height: 146px;
   -o-object-fit: contain;
-     object-fit: contain; /* на случай добавления картинки больше, чем заданные размеры */
+  object-fit: contain; /* на случай добавления картинки больше, чем заданные размеры */
 }
 
 .services-image-1 {
@@ -465,7 +485,7 @@ Index page - main
 }
 
 .services-item a {
-  padding: 17px 40px 15px 39px;
+  padding: 17px 41px 15px 39px;
 }
 
 .website-button {
@@ -515,6 +535,7 @@ Index page - main
 .features-and-statistics {
   position: relative; /* позиция для картинки nerds */
   display: flex;
+  flex-wrap: wrap;
   min-height: 413px;
   margin-bottom: 110px; /* расстояния от блока преимуществ и статистики до блока партнеров */
 }
@@ -587,7 +608,7 @@ Index page - main
   background-repeat: no-repeat;
   background-position: 0 0;
   -o-object-fit: contain;
-     object-fit: contain; /* на случай добавления картинки больше, чем заданные размеры */
+  object-fit: contain; /* на случай добавления картинки больше, чем заданные размеры */
   background-color: var(basic--white);
 }
 
@@ -800,8 +821,9 @@ Index page - main
   content: "";
   position: absolute; /* контакты на карте */
   bottom: 60px;
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-block;
+  display: inline-block;
+  vertical-align: top;
   width: 319px;
   min-height: 308px;
   z-index: 2;
@@ -812,7 +834,7 @@ Index page - main
 
 .contacts-title {
   padding: 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 23px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -828,7 +850,7 @@ Index page - main
 }
 
 .contacts-address {
-  margin-bottom: 4px;
+  margin-bottom: 18px;
 }
 
 .contacts-phone-number:focus {
@@ -836,8 +858,8 @@ Index page - main
 }
 
 .contacts-button {
-  margin-top: 21px; /* отступ между номером телефона и ссылкой "Напишите нам" */
-  padding: 17px 44px 0 44px;
+  margin-top: 37px; /* отступ между номером телефона и ссылкой "Напишите нам" */
+  padding: 17px 45px 15px 44px;
   background-color: var(--basic-red);
 }
 
@@ -849,250 +871,6 @@ Index page - main
 .contacts-button:active {
   background-color: var(--basic-dark-red);
   box-shadow: var(--basic-shadow-box);
-}
-
-/* Modal-login form */
-
-.write-to-us-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-.surname-and-email {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 760px;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 180px;
-  left: 0;
-  margin: auto;
-  color: var(--basic-black);
-  width: 960px;
-  height: 590px;
-  padding: 63px 99px 84px 100px;
-  background-image: url("../img/popup-write-to-us.jpg");
-  box-shadow: var(--basic-popup-shadow);
-  box-sizing: border-box;
-  z-index: 31; /* убирает просвечивание сквозь попап других элементов страницы */
-}
-
-.modal h2 {
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 53px;
-  margin: 0;
-  margin-bottom: 21px; /* отступ от заголовка "Напишите нам" до названия лэйблов */
-}
-
-.modal-description label {
-  display: block;
-  margin: 0;
-  margin-bottom: 9px; /* отступ от названия лэйблов до ячеек */
-  font-weight: 700;
-  line-height: 18px;
-}
-
-.modal-description input {
-  width: 360px;
-  min-height: 52px;
-  padding: 14px 14px 14px 16px;
-  border: 2px solid var(--basic-pale-gray);
-  border-radius: 3px;
-  box-sizing: border-box;
-  background-color: var(basic-white);
-}
-
-.modal-description textarea {
-  width: 760px;
-  min-height: 118px;
-  padding: 16px 14px 16px 16px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  border: 2px solid var(--basic-pale-gray);
-  background-color: var(basic-white);
-}
-
-.modal-description input:hover,
-.modal-description textarea:hover {
-  border: 2px solid var(--basic-full-gray);
-}
-
-.modal-description input:focus,
-.modal-description textarea:focus {
-  border: 2px solid var(--basic-black);
-}
-
-.modal-description input:invalid,
-.modal-description textarea:invalid {
-  border: 2px solid var(--basic-medium-red);
-  color: var(--basic-medium-red)
-}
-
-.letter-icon {
-  margin-bottom: 24px; /* отступ до кнопки "Отправить"*/
-}
-
-.modal-button {
-  padding: 17px 83px 15px 83px;
-  background-color: var(--basic-red);
-}
-
-.modal-button:hover,
-.modal-button:focus {
-  background-color: var(--basic-medium-red);
-}
-
-.modal-button:active {
-  background-color: var(--basic-dark-red);
-  box-shadow: var(--basic-shadow-box);
-}
-
-.modal-close {
-  position: absolute;
-  top: 70px;
-  right: 81px;
-  width: 38px;
-  height: 38px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.modal-close::before,
-.modal-close::after {
-  content: "";
-  position: absolute;
-  bottom: 17px;
-  right: 6px;
-  width: 25px;
-  height: 2px;
-  border-radius: 2px;
-  border: 1px solid var(--basic-red);
-  background-color: var(--basic-red);
-  box-shadow: var(--basic-drop-shadow);
-  opacity: 0.3;
-  cursor: pointer;
-}
-
-.modal-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-close::after {
-  transform: rotate(-45deg);
-}
-
-.modal-close:hover::before,
-.modal-close:hover::after,
-.modal-close:focus::before,
-.modal-close:focus::after {
-  opacity: 1;
-}
-
-.modal-close:active::before,
-.modal-close:active::after {
-  opacity: 0.1;
-}
-
-.modal-show {
-  display: block;  /* класс, созданный в script.js */
-  -webkit-animation: bounce 0.6s;
-          animation: bounce 0.6s;
-}
-
-.modal-error {
-  -webkit-animation: shake 0.6s;
-          animation: shake 0.6s; /* класс, созданный в script.js */
-}
-
-/* Animations */
-
-@-webkit-keyframes bounce {
-  0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
 }
 
 /* Social and sale */
@@ -1180,7 +958,9 @@ Index page - main
   margin-bottom: 74px;
 }
 
-/* ========== Catalog page - header ========== */
+/*=======================
+Catalog page - header
+=======================*/
 
 .inner-header {
   background-color: var(--basic-gray);
@@ -1217,7 +997,7 @@ Index page - main
   grid-template-columns: 260px 760px;
   grid-template-rows: auto 1fr auto;
   -moz-column-gap: 140px;
-       column-gap: 140px;
+  column-gap: 140px;
   align-content: start;
   margin-bottom: 59px;  /* расстояние от пагинации до карты */
 }
@@ -1350,8 +1130,8 @@ Index page - main
   display: block;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .filter-input-radio + label::before {
@@ -1623,7 +1403,7 @@ Index page - main
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   -o-object-fit: contain;
-     object-fit: contain; /* на случай добавления изображения больше, чем заданные размеры */
+  object-fit: contain; /* на случай добавления изображения больше, чем заданные размеры */
   background-color: var(--basic-gray); /* фон на случай, если не прогрузится изображение */
 }
 
@@ -1701,6 +1481,7 @@ Index page - main
   line-height: 30px;
   margin-top: 26px;  /* выравнивание по макету в Perfect Pixel */
   margin-bottom: 12px;  /* выравнивание по макету в Perfect Pixel */
+  margin-left: 2px;
   padding: 0 80px;  /* выравнивание по макету в Perfect Pixel */
   text-align: center;
   text-transform: uppercase;
@@ -1805,4 +1586,257 @@ Index page - main
 
 .pagination-item:nth-child(12n) {
   margin-right: 0;
+}
+
+/*================================
+write-to-us-form
+================================ */
+
+.write-to-us-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.surname-and-email {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 760px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 180px;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  width: 960px;
+  height: 590px;
+  padding: 63px 99px 84px 101px;
+  background-image: url("../img/popup-write-to-us.jpg");
+  box-shadow: var(--basic-popup-shadow);
+  box-sizing: border-box;
+  z-index: 31; /* убирает просвечивание сквозь попап других элементов страницы */
+}
+
+.modal h2 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  margin: 0;
+  margin-bottom: 21px; /* отступ от заголовка "Напишите нам" до названия лэйблов */
+}
+
+.name-icon label,
+.mail-icon label,
+.letter-icon label {
+  display: block;
+  margin: 0;
+  margin-bottom: 9px; /* отступ от названия лэйблов до ячеек */
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.name-icon input,
+.mail-icon input {
+  width: 360px;
+  min-height: 52px;
+  padding: 13px 14px 14px 13px;
+  border: 2px solid var(--basic-pale-gray);
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: var(basic-white);
+}
+
+.letter-icon textarea {
+  width: 760px;
+  min-height: 118px;
+  padding: 14px 14px 13px 14px;
+  border-radius: 3px;
+  resize: none;
+  box-sizing: border-box;
+  border: 2px solid var(--basic-pale-gray);
+  background-color: var(basic-white);
+}
+
+.name-icon input:hover,
+.mail-icon input:hover,
+.letter-icon textarea:hover {
+  border: 2px solid var(--basic-full-gray);
+}
+
+.name-icon input:focus,
+.mail-icon input:focus,
+.letter-icon textarea:focus {
+  border: 2px solid var(--basic-black);
+}
+
+.name-icon input:invalid,
+.mail-icon input:invalid,
+.letter-icon textarea:invalid {
+  border: 2px solid var(--basic-medium-red);
+  color: var(--basic-medium-red)
+}
+
+.letter-icon {
+  margin-bottom: 40px; /* отступ до кнопки "Отправить"*/
+}
+
+.modal-button {
+  padding: 17px 83px 15px 84px;
+  background-color: var(--basic-red);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--basic-medium-red);
+}
+
+.modal-button:active {
+  background-color: var(--basic-dark-red);
+  box-shadow: var(--basic-shadow-box);
+}
+
+.modal-close {
+  position: absolute;
+  top: 70px;
+  right: 81px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  bottom: 17px;
+  right: 6px;
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-red);
+  box-shadow: var(--basic-drop-shadow);
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after,
+.modal-close:focus::before,
+.modal-close:focus::after {
+  opacity: 1;
+}
+
+.modal-close:active::before,
+.modal-close:active::after {
+  opacity: 0.1;
+}
+
+.modal-show {
+  display: block;  /* класс, созданный в script.js */
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s; /* класс, созданный в script.js */
+}
+
+/* Animations */
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
