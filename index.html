@@ -32,9 +32,9 @@
       <section class="photoslides">
         <h2 class="visually-hidden">Фотослайды</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
-          <input class="visually-hidden slide-1" type="radio" id="slide-1" name="toggle" checked>
-          <input class="visually-hidden slide-2" type="radio" id="slide-2" name="toggle">
-          <input class="visually-hidden slide-3" type="radio" id="slide-3" name="toggle">
+          <input class="visually-hidden slide slide-1" type="radio" id="slide-1" name="toggle" checked>
+          <input class="visually-hidden slide slide-2" type="radio" id="slide-2" name="toggle">
+          <input class="visually-hidden slide slide-3" type="radio" id="slide-3" name="toggle">
           <div class="photoslides-controls">
             <label class="slider-controls-1" for="slide-1" aria-label="Первый слайд"></label>
             <label class="slider-controls-2" for="slide-2" aria-label="Второй слайд"></label>
@@ -241,30 +241,30 @@
   </footer>
 
   <!-- write-to-us-form -->
-    <section class="modal">
-      <h2>Напишите нам</h2>
-      <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="surname-and-email">
-          <p class="name-icon">
-            <label for="name">Ваше имя:</label>
-            <input class="login-icon-user" id="name" type="text" name="login" placeholder="Имя Фамилия">
-          </p>
-          <p class="mail-icon">
-            <label for="email">Ваш email:</label>
-            <input class="login-icon-mail" id="email" type="email" name="email" placeholder="email@example.com">
-          </p>
-        </div>
-        <p class="letter-icon">
-          <label for="letter">Текст письма:</label>
-          <textarea  class="login-icon-letter" id="letter" name="text-of-letter" placeholder="В свободной форме"></textarea>
+  <section class="modal">
+    <h2>Напишите нам</h2>
+    <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="surname-and-email">
+        <p class="name-icon">
+          <label for="name">Ваше имя:</label>
+          <input class="login-icon-user" id="name" type="text" name="login" placeholder="Имя Фамилия">
         </p>
-        <button class="button modal-button" type="submit">Отправить</button>
-      </form>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
-    </section>
+        <p class="mail-icon">
+          <label for="email">Ваш email:</label>
+          <input class="login-icon-mail" id="email" type="email" name="email" placeholder="email@example.com">
+        </p>
+      </div>
+      <p class="letter-icon">
+        <label for="letter">Текст письма:</label>
+        <textarea  class="login-icon-letter" id="letter" name="text-of-letter" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button modal-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
 
   <!-- JavaScript -->
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>

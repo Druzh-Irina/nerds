@@ -39,7 +39,7 @@ contactsClose.addEventListener("click", function (evt) {
   contactsPopup.classList.remove("modal-error");
 });
 
-// Обработчик отправки данных в форме. Форму потрясет, если не заполнены поля формы.
+// Обработчик отправки данных в форме. Форму потрясет, если поля пустые.
 contactsForm.addEventListener("submit", function (evt) {
   if (!contactsName.value || !contactsMail.value || !contactsLetter.value) {
     evt.preventDefault();

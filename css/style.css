@@ -64,7 +64,7 @@ Global
 ========== */
 
 body {
-  min-width: 1440px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -367,14 +367,13 @@ Index page - header
 
 .photoslides-controls {
   position: absolute; /* контейнер с кнопоками в слайдере */
-  left: 528px;
-  top: 309px;
+  left: 536px;
+  top: 317px;
   z-index: 20;
   width: 88px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 88px;
 }
 
 .photoslides-controls label {
@@ -392,8 +391,6 @@ Index page - header
   content: '';
   position: absolute; /* кнопки слайдера */
   z-index: 1;
-  top: 8px;
-  left: 8px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -412,13 +409,22 @@ Index page - header
   content: '';
   position: absolute; /* серый круг внутри кнопки слайда */
   z-index: 2;
-  top: 13px;
-  left: 13px;
+  top: 5px;
+  left: 5px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   border: 2px solid var(--basic-light-gray);
   background-color: inherit;
+}
+
+.slide-1:focus ~ .photoslides-controls .slider-controls-1::after,
+.slide-1:focus:checked ~ .photoslides-controls .slider-controls-1::before,
+.slide-2:focus ~ .photoslides-controls .slider-controls-2::after,
+.slide-2:focus:checked ~ .photoslides-controls .slider-controls-2::before,
+.slide-3:focus ~ .photoslides-controls .slider-controls-3::after,
+.slide-3:focus:checked ~ .photoslides-controls .slider-controls-3::before {
+  background-color: var(--basic-low-gray);
 }
 
 /* ====================
@@ -567,7 +573,7 @@ Index page - main
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 0 35px;
+  margin: 0 0 0 36px;
   padding: 0;
   list-style: none;
 }
@@ -624,7 +630,7 @@ Index page - main
 .statistics-caption {
   align-items: center;
   font-weight: 700;
-  margin: 0 0 32px 1px; /* расстояние между текстом "с 2004 года..." и цифрами */
+  margin: 0 0 32px 2px; /* расстояние между текстом "с 2004 года..." и цифрами */
   text-transform: uppercase;
   text-align: center;
   color: var(--basic-black);
@@ -651,13 +657,12 @@ Index page - main
   color: var(--basic-black);
 }
 
-
 .statistics-percent{
   font-weight: 700;
   font-size: 26px;
   line-height: 40px;
   padding: 3px 0 0 0;
-  margin-right: 21px;
+  margin-right: 22px;
   color: var(--basic-black);
 }
 
@@ -694,6 +699,10 @@ Index page - main
   list-style: none;
 }
 
+.partner-link {
+  font-size: 0; /* убирает лишнюю кривую обводку в табуляции */
+}
+
 .partner-link img {
   background-color: var(--basic-background-white);
   opacity: 0.2;
@@ -711,13 +720,13 @@ Index page - main
 /* Partners border */
 .partners {
   position: relative; /* позиция для горизонтальных серых бордеров */
-  margin-bottom: 119px;
+  margin-bottom: 114px;
 }
 
 .partners::after {
   content: "";
   position: absolute; /* верхний горизонтальный серый бордер */
-  bottom: 143px;
+  bottom: 148px;
   width: 1158px;
   border: 1px solid var(--basic-gray);
   background-color: var(--basic-gray);
