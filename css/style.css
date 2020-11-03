@@ -831,7 +831,6 @@ Index page - main
   position: absolute; /* контакты на карте */
   bottom: 60px;
   display: inline-block;
-  display: inline-block;
   vertical-align: top;
   width: 319px;
   min-height: 308px;
@@ -1456,22 +1455,23 @@ Catalog page - header
 }
 
 .template-popup {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
   content: "";
   position: absolute; /* попапы */
-  top: 363px;
+  bottom: 1px;
   width: 360px;
+  max-height: 578px;
   min-height: 231px;
-  box-sizing: border-box;
+  padding: 27px 53px 42px 52px;
   background-color: var(--basic-gray);
   box-shadow: var(--basic-drop-shadow);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: none;
   box-sizing: border-box;
+  overflow-y: auto;
   opacity: 0;
 }
 
@@ -1488,10 +1488,7 @@ Catalog page - header
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
-  margin-top: 26px;  /* выравнивание по макету в Perfect Pixel */
-  margin-bottom: 12px;  /* выравнивание по макету в Perfect Pixel */
   margin-left: 2px;
-  padding: 0 80px;  /* выравнивание по макету в Perfect Pixel */
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-black);
@@ -1501,14 +1498,13 @@ Catalog page - header
 .template-price-text-sedona {
   font-size: 16px;
   line-height: 18px;
-  margin: 0;
-  padding: 0 50px;  /* выравнивание по макету в Perfect Pixel */
+  margin: 12px 0 33px 0;
   text-align: center;
   color: var(--basic-medium-gray)
 }
 
 .template-price-text-sedona {
-  padding: 0 82px 0 78px;  /* скринридер криво отображает перенос текста через <br> в попапе Sedona, исправлено паддингами */
+  padding: 0 30px;  /* криво отображается перенос текста через <br> в попапе Sedona, исправлено паддингами */
 }
 
 .template-price-title:hover,
@@ -1523,8 +1519,6 @@ Catalog page - header
 
 .template-price-button {
   padding: 17px 72px 15px 72px;
-  margin-top: 32px;  /* выравнивание по макету в Perfect Pixel */
-  margin-bottom: 44px;  /* выравнивание по макету в Perfect Pixel */
   background-color: var(--basic-red);
 }
 
