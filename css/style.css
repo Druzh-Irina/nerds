@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 2 version,not dead,not ie <= 11
-*/
-
 /* Variables */
 
 :root {
@@ -171,7 +164,6 @@ Index page - header
 
 .site-navigation a,
 .user-navigation a {
-  position: relative; /* для индикатора нахождения на странице */
   display: block;
   font-weight: 500;
   line-height: 30px;
@@ -219,7 +211,6 @@ Index page - header
 }
 
 .user-navigation {
-  position: relative; /* для индикатора нахождения на странице */
   display: flex;
   max-width: 120px;
   margin: 0 0 0 auto;
@@ -245,52 +236,6 @@ Index page - header
 .user-navigation .cart {
   position: relative; /* для рисунка "корзина" */
   padding-left: 45px;
-}
-
-.site-navigation .navigation-current:first-child::before {
-  content: "";
-  position: absolute;  /* индикатор нахождения на странице студия */
-  top: 118px;
-  width: 61px;
-  border: 1px solid var(--basic-red);
-  background-color: var(--basic-red);
-}
-
-.site-navigation .navigation-current:nth-child(2n)::before {
-  content: "";
-  position: absolute;  /* индикатор нахождения на странице клиенты */
-  top: 118px;
-  width: 76px;
-  border: 1px solid var(--basic-red);
-  background-color: var(--basic-red);
-}
-
-.site-navigation .navigation-current:nth-child(3n)::before {
-  content: "";
-  position: absolute;  /* индикатор нахождения на странице магазин */
-  top: 118px;
-  width: 73px;
-  border: 1px solid var(--basic-red);
-  background-color: var(--basic-red);
-}
-
-.site-navigation .navigation-current:nth-child(4n)::before {
-  content: "";
-  position: absolute;  /* индикатор нахождения на странице контакты */
-  top: 118px;
-  width: 83px;
-  border: 1px solid var(--basic-red);
-  background-color: var(--basic-red);
-}
-
-.user-navigation .navigation-current::before {
-  content: "";
-  position: absolute;  /* индикатор нахождения на странице корзина */
-  top: 43px;
-  left: 5px;
-  width: 112px;
-  border: 1px solid var(--basic-red);
-  background-color: var(--basic-red);
 }
 
 /* Photoslides */
@@ -434,18 +379,7 @@ Index page - main
 /* Services */
 
 .services {
-  position: relative; /* позиция для горизонтального серого бордера */
   margin-bottom: 121px;
-}
-
-.services::before {
-  content: "";
-  position: absolute; /* горизонтальный серый бордер */
-  top: 427px;
-  right: 2px;
-  width: 1156px;
-  border: 1px solid var(--basic-gray);
-  background-color: var(--basic-gray);
 }
 
 .services-list {
@@ -539,11 +473,20 @@ Index page - main
 /* Features and statistics */
 
 .features-and-statistics {
-  position: relative; /* позиция для картинки nerds */
+  position: relative; /* позиция для картинки nerds и для горизонтального серого бордера */
   display: flex;
   flex-wrap: wrap;
   min-height: 413px;
   margin-bottom: 110px; /* расстояния от блока преимуществ и статистики до блока партнеров */
+}
+
+.features-and-statistics::after {
+  content: "";
+  position: absolute; /* горизонтальный серый бордер */
+  top: -41px;
+  width: 1156px;
+  border: 1px solid var(--basic-gray);
+  background-color: var(--basic-gray);
 }
 
 .features-slogan {
@@ -598,9 +541,7 @@ Index page - main
   background-color: var(--basic-red);
 }
 
-
 /* Statistics */
-
 
 .features-and-statistics::before {
   content: "";
@@ -719,23 +660,28 @@ Index page - main
 
 /* Partners border */
 .partners {
-  position: relative; /* позиция для горизонтальных серых бордеров */
   margin-bottom: 114px;
 }
 
-.partners::after {
+.partners-list {
+  position: relative; /* позиция для горизонтальных серых бордеров */
+}
+
+.partners-list::after {
   content: "";
   position: absolute; /* верхний горизонтальный серый бордер */
-  bottom: 148px;
+  top: -48px;
+  right: 1px;
   width: 1158px;
   border: 1px solid var(--basic-gray);
   background-color: var(--basic-gray);
 }
 
-.partners::before {
+.partners-list::before {
   content: "";
   position: absolute; /* нижний горизонтальный серый бордер */
-  top: 134px;
+  bottom: -34px;
+  right: 1px;
   width: 1158px;
   border: 1px solid var(--basic-gray);
   background-color: var(--basic-gray);
@@ -895,13 +841,14 @@ Index page - main
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 261px;
-  margin: 61px 0 68px 0;
+  margin: 61px 0 59px 0;
   padding: 0;
   list-style: none;
 }
 
 .social-item {
   margin-right: 9px;
+  margin-bottom: 9px;
   position: relative;
 }
 
@@ -985,18 +932,84 @@ Catalog page - header
   opacity: 0.3;
 }
 
+.site-navigation .studio-current,
+.site-navigation .clients-current,
+.site-navigation .shop-current,
+.site-navigation .contacts-current,
+.user-navigation .cart-current {
+  position: relative; /* позиция для индикатора нахождения на странице */
+}
+
+.site-navigation .studio-current::before {
+  display: none;
+  content: "";
+  position: absolute;  /* индикатор нахождения на странице студия */
+  top: 43px;
+  width: 61px;
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-red);
+}
+
+.site-navigation .clients-current::before {
+  display: none;
+  content: "";
+  position: absolute;  /* индикатор нахождения на странице клиенты */
+  top: 43px;
+  width: 76px;
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-red);
+}
+
+.site-navigation .shop-current::before {
+  content: "";
+  position: absolute;  /* индикатор нахождения на странице магазин */
+  top: 43px;
+  left: 2px;
+  width: 71px;
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-red);
+}
+
+.site-navigation .contacts-current:nth-child(4n)::before {
+  display: none;
+  content: "";
+  position: absolute;  /* индикатор нахождения на странице контакты */
+  top: 43px;
+  width: 83px;
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-red);
+}
+
+.user-navigation .cart-current::before {
+  display: none;
+  content: "";
+  position: absolute;  /* индикатор нахождения на странице корзина */
+  top: 43px;
+  left: 5px;
+  width: 112px;
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-red);
+}
+
+
+
+.site-navigation a {
+  margin-bottom: 10px; /* в случае переполнения контентом индикатор нахождения на странице не перечеркивает второй ряд ссылок */
+}
+
 /* Catalog title */
 
 .catalog-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  margin: 79px 0 108px 0;
+  margin: 78px 0 108px 0;
   text-align: center;
   color: var(--basic-black);
 }
 
 /* ========== Catalog page - main ========== */
+
 
 /* Grid for main */
 
@@ -1104,7 +1117,7 @@ Catalog page - header
 .price-controls input {
   width: 60px;
   padding: 10px;
-  margin-left: 7px; /* отцентровка шкалы с цифрами. Цифры внутри шкалы не центрируются из-за наличия внутри шкалы таб-переключателя*/
+  margin-left: 7px; /* отцентровка шкалы с цифрами. */
   text-align: center;
   border: none;
   border-radius: 3px;
@@ -1178,8 +1191,8 @@ Catalog page - header
   opacity: 1;
 }
 
-.filter-input-radio + label:disabled::before,
-.filter-input-radio:checked + label:disabled::after {
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:checked:disabled + label::after {
   opacity: 0.1;
 }
 
@@ -1230,8 +1243,8 @@ Catalog page - header
   opacity: 1;
 }
 
-.filter-input-checkbox + label:disabled::after,
-.filter-input-checkbox:checked + label:disabled::after {
+.filter-input-checkbox:disabled + label::after,
+.filter-input-checkbox:checked:disabled + label::after {
   opacity: 0.1;
 }
 
@@ -1569,6 +1582,15 @@ Catalog page - header
   color: var(--basic-dark-gray);
   background-color: var(--basic-high-gray);
   box-shadow: var(--basic-shadow-box);
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border: 3px solid var(--basic-hyper-gray);
+  box-shadow: none;
 }
 
 /*  Flex for pagination */

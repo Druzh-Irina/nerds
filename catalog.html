@@ -5,7 +5,7 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body  class="page-body">
@@ -17,13 +17,13 @@
           <img src="img/nerds-logo.svg" width="160" height="65" alt="чёрный логотип nёrds на белом фоне">
         </a>
         <ul class="site-navigation">
-          <li class="site-link"><a href="#">Студия</a></li>
-          <li class="site-link"><a href="#">Клиенты</a></li>
-          <li class="site-link navigation-current"><a href="catalog.html">Магазин</a></li>
-          <li class="site-link"><a href="#">Контакты</a></li>
+          <li class="site-link studio-current"><a href="#">Студия</a></li>
+          <li class="site-link clients-current"><a href="#">Клиенты</a></li>
+          <li class="site-link shop-current"><a href="catalog.html">Магазин</a></li>
+          <li class="site-link contacts-current"><a href="#">Контакты</a></li>
         </ul>
         <div class="user-navigation">
-          <a class="cart" href="#">Корзина</a>
+          <a class="cart cart-current" href="#">Корзина</a>
         </div>
       </nav>
       <h1 class="catalog-title">Магазин готовых шаблонов</h1>
@@ -46,209 +46,209 @@
               </div>
             </div>
             <div class="toggle toggle-min" tabindex="0">
+            </div>
+            <div class="toggle toggle-max" tabindex="0">
+            </div>
           </div>
-          <div class="toggle toggle-max" tabindex="0">
+
+          <div class="price-controls">
+            <label class="min-price">
+              от <input type="text" name="min-price" value="0">
+            </label>
+            <label class="max-price">
+              до <input type="text" name="max-price" value="15 000">
+            </label>
+          </div>
         </div>
-      </div>
-
-      <div class="price-controls">
-        <label class="min-price">
-          от <input type="text" name="min-price" value="0">
-        </label>
-        <label class="max-price">
-          до <input type="text" name="max-price" value="15 000">
-        </label>
-      </div>
-    </div>
-  </fieldset>
+      </fieldset>
 
 
-  <fieldset class="filter-layot">
-    <legend>Сетка:</legend>
-    <ul>
-      <li class="filter-option filter-radio">
-        <input class="visually-hidden filter-input-radio filter-input" type="radio" name="layout" value="adaptive" id="filter-adaptive" checked>
-        <label for="filter-adaptive">Адаптивная</label>
+      <fieldset class="filter-layot">
+        <legend>Сетка:</legend>
+        <ul>
+          <li class="filter-option filter-radio">
+            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="layout" value="adaptive" id="filter-adaptive" checked>
+            <label for="filter-adaptive">Адаптивная</label>
+          </li>
+          <li class="filter-option filter-radio">
+            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="layout" value="fixed" id="filter-fixed">
+            <label for="filter-fixed">Фиксированная</label>
+          </li>
+          <li class="filter-option filter-radio">
+            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="layout" value="rubber" id="filter-rubber">
+            <label for="filter-rubber">Резиновая</label>
+          </li>
+        </ul>
+      </fieldset>
+
+
+      <fieldset class="filter-specificity">
+        <legend>Особенности:</legend>
+        <ul>
+          <li class="filter-option filter-checkbox">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
+            <label for="filter-slider">Слайдер</label>
+          </li>
+          <li class="filter-option filter-checkbox">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="block" id="filter-block">
+            <label for="filter-block">Блок преимуществ</label>
+          </li>
+          <li class="filter-option filter-checkbox">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
+            <label for="filter-news">Новости</label>
+          </li>
+          <li class="filter-option filter-checkbox">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="gallery" id="filter-gallery">
+            <label for="filter-gallery">Галерея</label>
+          </li>
+          <li class="filter-option filter-checkbox">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="shopping-cart" id="filter-shopping-cart">
+            <label for="filter-shopping-cart">Корзина</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit" class="filter-button button">Показать</button>
+    </form>
+  </section>
+
+  <section class="sorting-filter">
+    <h2 class="visually-hidden">Фильтр сортировки</h2>
+    <span>Сортировать:</span>
+    <ul class="sorting-filter-list">
+
+      <li class="sorting-filter-item sorting-filter-item-current">
+        <a tabindex="0">По цене</a>
       </li>
-      <li class="filter-option filter-radio">
-        <input class="visually-hidden filter-input-radio filter-input" type="radio" name="layout" value="fixed" id="filter-fixed">
-        <label for="filter-fixed">Фиксированная</label>
+      <li class="sorting-filter-item">
+        <a href="#">По типу</a>
       </li>
-      <li class="filter-option filter-radio">
-        <input class="visually-hidden filter-input-radio filter-input" type="radio" name="layout" value="rubber" id="filter-rubber">
-        <label for="filter-rubber">Резиновая</label>
+      <li class="sorting-filter-item">
+        <a href="#" tabindex="0">По названию</a>
       </li>
     </ul>
-  </fieldset>
 
-
-  <fieldset class="filter-specificity">
-    <legend>Особенности:</legend>
-    <ul>
-      <li class="filter-option filter-checkbox">
-        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
-        <label for="filter-slider">Слайдер</label>
+    <ul class="triangle-list">
+      <li class="triangle-item triangle-item-current">
+        <a class="triangle-down" href="#" aria-label="Вниз"></a>
       </li>
-      <li class="filter-option filter-checkbox">
-        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="block" id="filter-block">
-        <label for="filter-block">Блок преимуществ</label>
-      </li>
-      <li class="filter-option filter-checkbox">
-        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
-        <label for="filter-news">Новости</label>
-      </li>
-      <li class="filter-option filter-checkbox">
-        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="gallery" id="filter-gallery">
-        <label for="filter-gallery">Галерея</label>
-      </li>
-      <li class="filter-option filter-checkbox">
-        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="shopping-cart" id="filter-shopping-cart">
-        <label for="filter-shopping-cart">Корзина</label>
+      <li class="triangle-item">
+        <a class="triangle-up" href="#" aria-label="Вверх"></a>
       </li>
     </ul>
-  </fieldset>
-  <button type="submit" class="filter-button button">Показать</button>
-</form>
-</section>
+  </section>
 
-<section class="sorting-filter">
-  <h2 class="visually-hidden">Фильтр сортировки</h2>
-  <span>Сортировать:</span>
-  <ul class="sorting-filter-list">
+  <section class="templates">
+    <h2 class="visually-hidden">Шаблоны</h2>
+    <ul class="template-list">
+      <li class="template-item" tabindex="0">
+        <h3 class="visually-hidden">SEDONA</h3>
+        <div class="templates-button">
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+        </div>
+        <img class="template-picture" src="img/img-sedona.jpg" width="358" height="578" alt="Главная страница сайта, фото достопримечательностей города и обзор преимуществ для туризма">
+        <div class="template-popup">
+          <a class="template-price-title" href="sedona.html">Sedona</a>
+          <p class="template-price-text-sedona">Информационный сайт для туристов</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
+        </div>
+      </li>
 
-    <li class="sorting-filter-item sorting-filter-item-current">
-      <a tabindex="0">По цене</a>
-    </li>
-    <li class="sorting-filter-item">
-      <a href="#">По типу</a>
-    </li>
-    <li class="sorting-filter-item">
-      <a href="#" tabindex="0">По названию</a>
-    </li>
-  </ul>
+      <li class="template-item" tabindex="0">
+        <h3 class="visually-hidden">PINK</h3>
+        <div class="templates-button">
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+        </div>
+        <img class="template-picture" src="img/img-pink.jpg" width="358" height="578" alt="Главная страница сайта, предложение скачать приложение, изображение с телефоном в руке, экран телефона с ярко-розовым фильтром">
+        <div class="template-popup">
+          <a class="template-price-title" href="pink.html">Pink App</a>
+          <p class="template-price-text">Продуктовый лендинг <br> приложения для iOS и Android</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
+        </div>
+      </li>
 
-  <ul class="triangle-list">
-    <li class="triangle-item triangle-item-current">
-      <a class="triangle-down" href="#" aria-label="Вниз"></a>
-    </li>
-    <li class="triangle-item">
-      <a class="triangle-up" href="#" aria-label="Вверх"></a>
-    </li>
-  </ul>
-</section>
+      <li class="template-item" tabindex="0">
+        <h3 class="visually-hidden">Barbershop BORODINSKI</h3>
+        <div class="templates-button">
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+        </div>
+        <img class="template-picture" src="img/img-barbershop.jpg" width="358" height="578" alt="Главная страница сайта, тёмный фон с рабочим местом барбера, указание статистики и преимуществ салона">
+        <div class="template-popup">
+          <a class="template-price-title" href="barbershop.html">Barbershop</a>
+          <p class="template-price-text">Сайт салона красоты.<br>  Для мужчин, да.</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
+        </div>
+      </li>
 
-<section class="templates">
-  <h2 class="visually-hidden">Шаблоны</h2>
-  <ul class="template-list">
-    <li class="template-item" tabindex="0">
-      <h3 class="visually-hidden">SEDONA</h3>
-      <div class="templates-button">
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-      </div>
-      <img class="template-picture" src="img/img-sedona.jpg" width="358" height="578" alt="Главная страница сайта, фото достопримечательностей города и обзор преимуществ для туризма">
-      <div class="template-popup">
-        <a class="template-price-title" href="sedona.html">Sedona</a>
-        <p class="template-price-text-sedona">Информационный сайт для туристов</p>
-        <a class="button template-price-button" href="#">9 900 ₽</a>
-      </div>
-    </li>
+      <li class="template-item" tabindex="0">
+        <h3 class="visually-hidden">MiSHKA</h3>
+        <div class="templates-button">
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+        </div>
+        <img class="template-picture" src="img/img-mishka.jpg" width="358" height="578" alt="Главная страница сайта, фотографии вязаных изделий с указанием параметров и цены, информация о преимуществах магазина">
+        <div class="template-popup">
+          <a class="template-price-title" href="mishka.html">MISHKA</a>
+          <p class="template-price-text">Интернет магазин <br> вязаных игрушек</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
+        </div>
+      </li>
 
-    <li class="template-item" tabindex="0">
-      <h3 class="visually-hidden">PINK</h3>
-      <div class="templates-button">
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-      </div>
-      <img class="template-picture" src="img/img-pink.jpg" width="358" height="578" alt="Главная страница сайта, предложение скачать приложение, изображение с телефоном в руке, экран телефона с ярко-розовым фильтром">
-      <div class="template-popup">
-        <a class="template-price-title" href="pink.html">Pink App</a>
-        <p class="template-price-text">Продуктовый лендинг <br> приложения для iOS и Android</p>
-        <a class="button template-price-button" href="#">9 900 ₽</a>
-      </div>
-    </li>
+      <li class="template-item" tabindex="0">
+        <h3 class="visually-hidden">A Plus</h3>
+        <div class="templates-button">
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+        </div>
+        <img class="template-picture" src="img/img-aplus.jpg" width="358" height="578" alt="Главная страница сайта, на сиреневом фоне изображены дисковый телефон, планшет и рука с канцелярскими предметами, указание формы обучения и преимуществ курсов">
+        <div class="template-popup">
+          <a class="template-price-title" href="aplus.html">A Plus</a>
+          <p class="template-price-text">Лендинг курсов повышения<br> квалификации</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
+        </div>
+      </li>
 
-    <li class="template-item" tabindex="0">
-      <h3 class="visually-hidden">Barbershop BORODINSKI</h3>
-      <div class="templates-button">
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-      </div>
-      <img class="template-picture" src="img/img-barbershop.jpg" width="358" height="578" alt="Главная страница сайта, тёмный фон с рабочим местом барбера, указание статистики и преимуществ салона">
-      <div class="template-popup">
-        <a class="template-price-title" href="barbershop.html">Barbershop</a>
-        <p class="template-price-text">Сайт салона красоты.<br>  Для мужчин, да.</p>
-        <a class="button template-price-button" href="#">9 900 ₽</a>
-      </div>
-    </li>
+      <li class="template-item" tabindex="0">
+        <h3 class="visually-hidden">КВАСТ</h3>
+        <div class="templates-button">
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+          <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
+        </div>
+        <img class="template-picture" src="img/img-kvast.jpg" width="358" height="578" alt="Главная страница сайта, фоновое изображение с колосьями ржи, фотографии стеклянных бутылок кваса с описанием разновидностей">
+        <div class="template-popup">
+          <a class="template-price-title" href="kvast.html">КВАСТ</a>
+          <p class="template-price-text">Промо-сайт производителя<br>  крафтового кваса</p>
+          <a class="button template-price-button" href="#">9 900 ₽</a>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-    <li class="template-item" tabindex="0">
-      <h3 class="visually-hidden">MiSHKA</h3>
-      <div class="templates-button">
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-      </div>
-      <img class="template-picture" src="img/img-mishka.jpg" width="358" height="578" alt="Главная страница сайта, фотографии вязаных изделий с указанием параметров и цены, информация о преимуществах магазина">
-      <div class="template-popup">
-        <a class="template-price-title" href="mishka.html">MISHKA</a>
-        <p class="template-price-text">Интернет магазин <br> вязаных игрушек</p>
-        <a class="button template-price-button" href="#">9 900 ₽</a>
-      </div>
-    </li>
-
-    <li class="template-item" tabindex="0">
-      <h3 class="visually-hidden">A Plus</h3>
-      <div class="templates-button">
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-      </div>
-      <img class="template-picture" src="img/img-aplus.jpg" width="358" height="578" alt="Главная страница сайта, на сиреневом фоне изображены дисковый телефон, планшет и рука с канцелярскими предметами, указание формы обучения и преимуществ курсов">
-      <div class="template-popup">
-        <a class="template-price-title" href="aplus.html">A Plus</a>
-        <p class="template-price-text">Лендинг курсов повышения<br> квалификации</p>
-        <a class="button template-price-button" href="#">9 900 ₽</a>
-      </div>
-    </li>
-
-    <li class="template-item" tabindex="0">
-      <h3 class="visually-hidden">КВАСТ</h3>
-      <div class="templates-button">
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-        <button type="button" aria-label="Декоративная кнопка" tabindex="-1"></button>
-      </div>
-      <img class="template-picture" src="img/img-kvast.jpg" width="358" height="578" alt="Главная страница сайта, фоновое изображение с колосьями ржи, фотографии стеклянных бутылок кваса с описанием разновидностей">
-      <div class="template-popup">
-        <a class="template-price-title" href="kvast.html">КВАСТ</a>
-        <p class="template-price-text">Промо-сайт производителя<br>  крафтового кваса</p>
-        <a class="button template-price-button" href="#">9 900 ₽</a>
-      </div>
-    </li>
-  </ul>
-</section>
-
-<section class="pagination">
-  <h2 class="visually-hidden">Пагинация</h2>
-  <ul class="pagination-list">
-    <li class="pagination-item pagination-item-current">
-      <a tabindex="0">1</a>
-    </li>
-    <li class="pagination-item">
-      <a href="#">2</a>
-    </li>
-    <li class="pagination-item">
-      <a href="#">3</a>
-    </li>
-    <li class="pagination-item pagination-item-next">
-      <a href="#">Следующая</a>
-    </li>
-  </ul>
-</section>
+  <section class="pagination">
+    <h2 class="visually-hidden">Пагинация</h2>
+    <ul class="pagination-list">
+      <li class="pagination-item pagination-item-current">
+        <a tabindex="0">1</a>
+      </li>
+      <li class="pagination-item">
+        <a href="#">2</a>
+      </li>
+      <li class="pagination-item">
+        <a href="#">3</a>
+      </li>
+      <li class="pagination-item pagination-item-next">
+        <a href="#">Следующая</a>
+      </li>
+    </ul>
+  </section>
 
 </main>
 
@@ -324,30 +324,30 @@
 </footer>
 
 <!-- write-to-us-form -->
-  <section class="modal">
-    <h2>Напишите нам</h2>
-    <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="surname-and-email">
-        <p class="name-icon">
-          <label for="name">Ваше имя:</label>
-          <input class="login-icon-user" id="name" type="text" name="login" placeholder="Имя Фамилия">
-        </p>
-        <p class="mail-icon">
-          <label for="email">Ваш email:</label>
-          <input class="login-icon-mail" id="email" type="email" name="email" placeholder="email@example.com">
-        </p>
-      </div>
-      <p class="letter-icon">
-        <label for="letter">Текст письма:</label>
-        <textarea  class="login-icon-letter" id="letter" name="text-of-letter" placeholder="В свободной форме"></textarea>
+<section class="modal">
+  <h2>Напишите нам</h2>
+  <form class="write-to-us-form" action="https://echo.htmlacademy.ru" method="post">
+    <div class="surname-and-email">
+      <p class="name-icon">
+        <label for="name">Ваше имя:</label>
+        <input class="login-icon-user" id="name" type="text" name="login" placeholder="Имя Фамилия">
       </p>
-      <button class="button modal-button" type="submit">Отправить</button>
-    </form>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
-  </section>
+      <p class="mail-icon">
+        <label for="email">Ваш email:</label>
+        <input class="login-icon-mail" id="email" type="email" name="email" placeholder="email@example.com">
+      </p>
+    </div>
+    <p class="letter-icon">
+      <label for="letter">Текст письма:</label>
+      <textarea  class="login-icon-letter" id="letter" name="text-of-letter" placeholder="В свободной форме"></textarea>
+    </p>
+    <button class="button modal-button" type="submit">Отправить</button>
+  </form>
+  <button class="modal-close" type="button" aria-label="Закрыть"></button>
+</section>
 
 <!-- JavaScript -->
-  <script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 
 </body>
 </html>

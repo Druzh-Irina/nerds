@@ -63,29 +63,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-
-
-// Создание маркера на интерактивной карте
-function initMap() {
-  const coordinates = {lat: 59.938819, lng: 30.323026},
-
-  map = new google.maps.Map(document.getElementById("interactive-map"), {
-    center: coordinates
-  });
-
-  // Указываем свою иконку для маркера
-  image = "img/map-marker.png";
-
-  marker = new google.maps.Marker({
-
-    // Указываем координаты маркера
-    position: coordinates,
-
-    // Указываем id карты, на которой должен появиться маркер
-    map: map,
-
-    // Указываем свою иконку для маркера
-    icon: image
-  });
-}
