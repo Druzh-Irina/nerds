@@ -1193,7 +1193,12 @@ Catalog page - header
 
 .filter-input-radio:disabled + label::before,
 .filter-input-radio:checked:disabled + label::after {
-  opacity: 0.1;
+  opacity: 0.3;
+}
+
+.filter-input-radio:disabled + label,
+.filter-input-radio:checked:disabled + label {
+  opacity: 0.3;
 }
 
 /* filter checkbox */
@@ -1245,7 +1250,12 @@ Catalog page - header
 
 .filter-input-checkbox:disabled + label::after,
 .filter-input-checkbox:checked:disabled + label::after {
-  opacity: 0.1;
+  opacity: 0.3;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-checkbox:checked:disabled + label{
+  opacity: 0.3;
 }
 
 /* filter-button */
