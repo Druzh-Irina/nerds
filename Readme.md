@@ -2,6 +2,9 @@
 
 Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Профессиональная вёрстка сайтов](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
 
+* Студент: [Ирина Дружинина](https://up.htmlacademy.ru/htmlcss/29/user/1086347).
+* Наставник: [Максим Кузнецов](https://htmlacademy.ru/profile/knenkne).
+
 Цель онлайн курса - знакомство с HTML 5 и CSS 3.
 Слайдер (необязательное задание) выполнен на CSS. 
 Модальное окно "Напишите нам" оживлено JavaScript.
